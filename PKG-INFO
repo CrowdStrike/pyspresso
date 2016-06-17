@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: pyspresso
+Version: 0.1
+Summary: Python-based framework for debugging Java
+Home-page: https://github.com/CrowdStrike/pyspresso/
+Author: Jason Geffner
+Author-email: jason@malwareanalysis.com
+License: GNU General Public License v3 or later (GPLv3+)
+Description: Python-based framework for debugging Java
+Platform: Android
+Platform: Linux
+Platform: MacOS
+Platform: Windows
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Natural Language :: English
+Classifier: Operating System :: Android
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Debuggers

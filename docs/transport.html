@@ -1,0 +1,350 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pyspresso.transport &mdash; pyspresso 0.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="pyspresso 0.1 documentation" href="index.html"/>
+        <link rel="next" title="pyspresso.events" href="events.html"/>
+        <link rel="prev" title="pyspresso.debug_interface" href="debug_interface.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pyspresso
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="debug_interface.html">pyspresso.debug_interface</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">pyspresso.transport</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="events.html">pyspresso.events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="event_modifiers.html">pyspresso.event_modifiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="constants.html">pyspresso.constants</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">pyspresso</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>pyspresso.transport</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pyspresso-transport">
+<h1>pyspresso.transport<a class="headerlink" href="#pyspresso-transport" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul class="simple">
+</ul>
+</div>
+<span class="target" id="module-pyspresso.transport"></span><dl class="class">
+<dt id="pyspresso.transport.CommandPacket">
+<em class="property">class </em><code class="descclassname">pyspresso.transport.</code><code class="descname">CommandPacket</code><span class="sig-paren">(</span><em>id</em>, <em>command</em>, <em>data=''</em>, <em>flags=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.transport.CommandPacket" title="Permalink to this definition">¶</a></dt>
+<dd><p>A JDWP Command <a class="reference internal" href="#pyspresso.transport.Packet" title="pyspresso.transport.Packet"><code class="xref any py py-class docutils literal"><span class="pre">Packet</span></code></a>, as defined at
+<a class="reference external" href="http://docs.oracle.com/javase/8/docs/technotes/guides/jpda/jdwp-spec.html">http://docs.oracle.com/javase/8/docs/technotes/guides/jpda/jdwp-spec.html</a></p>
+<dl class="attribute">
+<dt id="pyspresso.transport.CommandPacket.command">
+<code class="descname">command</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.transport.CommandPacket.command" title="Permalink to this definition">¶</a></dt>
+<dd><p>Packet&#8217;s command.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.transport.CommandPacket.command_set">
+<code class="descname">command_set</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.transport.CommandPacket.command_set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Packet&#8217;s command set.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyspresso.transport.DebugTransport">
+<em class="property">class </em><code class="descclassname">pyspresso.transport.</code><code class="descname">DebugTransport</code><span class="sig-paren">(</span><em>transport='dt_shmem'</em>, <em>server=False</em>, <em>address=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.transport.DebugTransport" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference internal" href="#pyspresso.transport.DebugTransport" title="pyspresso.transport.DebugTransport"><code class="xref any py py-class docutils literal"><span class="pre">DebugTransport</span></code></a> class defines JDWP transports for both
+shared-memory-based transport and socket-based transport.</p>
+<p>The <a class="reference internal" href="#pyspresso.transport.DebugTransport" title="pyspresso.transport.DebugTransport"><code class="xref any py py-class docutils literal"><span class="pre">DebugTransport</span></code></a> constructor initializes member variables
+and binds transport-specific functions.</p>
+<p>The <em>transport</em> value should be <code class="docutils literal"><span class="pre">&quot;dt_shmem&quot;</span></code> for shared-memory-based
+transport or <code class="docutils literal"><span class="pre">&quot;dt_socket&quot;</span></code> for socket-based transport.</p>
+<p>If the <em>server</em> value is <code class="docutils literal"><span class="pre">True</span></code> then the debugger acts as the server
+and the debuggee acts as the client. Otherwise, the debuggee acts as
+the server and the debugger acts as the client.</p>
+<p>The <em>address</em> value should be in the format <code class="docutils literal"><span class="pre">&quot;hostname:port&quot;</span></code> for
+socket-based transport, or should be the shared file mapping name for
+shared-memory-based transport.</p>
+<dl class="class">
+<dt id="pyspresso.transport.DebugTransport.AtomicCounter">
+<em class="property">class </em><code class="descname">AtomicCounter</code><a class="headerlink" href="#pyspresso.transport.DebugTransport.AtomicCounter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Atomic &#8220;fetch and increment&#8221; class for packet IDs.</p>
+<dl class="method">
+<dt id="pyspresso.transport.DebugTransport.AtomicCounter.next">
+<code class="descname">next</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.transport.DebugTransport.AtomicCounter.next" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the next 32-bit packet ID.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyspresso.transport.DebugTransport.Mutex">
+<em class="property">class </em><code class="descclassname">DebugTransport.</code><code class="descname">Mutex</code><span class="sig-paren">(</span><em>handle</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.transport.DebugTransport.Mutex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mutex class to support Python&#8217;s <code class="docutils literal"><span class="pre">with</span></code> statement.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.transport.DebugTransport.attach">
+<code class="descclassname">DebugTransport.</code><code class="descname">attach</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.transport.DebugTransport.attach" title="Permalink to this definition">¶</a></dt>
+<dd><p>Attach to the debuggee.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.transport.DebugTransport.handshake">
+<code class="descclassname">DebugTransport.</code><code class="descname">handshake</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.transport.DebugTransport.handshake" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform the initial handshake with the debuggee.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.transport.DebugTransport.make_packet">
+<code class="descclassname">DebugTransport.</code><code class="descname">make_packet</code><span class="sig-paren">(</span><em>command</em>, <em>data=''</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.transport.DebugTransport.make_packet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a JDWP <a class="reference internal" href="#pyspresso.transport.CommandPacket" title="pyspresso.transport.CommandPacket"><code class="xref any py py-class docutils literal"><span class="pre">CommandPacket</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.transport.DebugTransport.recv">
+<code class="descclassname">DebugTransport.</code><code class="descname">recv</code><span class="sig-paren">(</span><em>count</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.transport.DebugTransport.recv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Receive bytes from the debuggee.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.transport.DebugTransport.recv_packet">
+<code class="descclassname">DebugTransport.</code><code class="descname">recv_packet</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.transport.DebugTransport.recv_packet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Receive the next <a class="reference internal" href="#pyspresso.transport.CommandPacket" title="pyspresso.transport.CommandPacket"><code class="xref any py py-class docutils literal"><span class="pre">CommandPacket</span></code></a> or <a class="reference internal" href="#pyspresso.transport.ReplyPacket" title="pyspresso.transport.ReplyPacket"><code class="xref any py py-class docutils literal"><span class="pre">ReplyPacket</span></code></a> from
+the debuggee.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.transport.DebugTransport.send">
+<code class="descclassname">DebugTransport.</code><code class="descname">send</code><span class="sig-paren">(</span><em>bytes</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.transport.DebugTransport.send" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send bytes to the debuggee.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.transport.DebugTransport.send_packet">
+<code class="descclassname">DebugTransport.</code><code class="descname">send_packet</code><span class="sig-paren">(</span><em>packet</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.transport.DebugTransport.send_packet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decode and send a JDWP <a class="reference internal" href="#pyspresso.transport.CommandPacket" title="pyspresso.transport.CommandPacket"><code class="xref any py py-class docutils literal"><span class="pre">CommandPacket</span></code></a> to the debuggee.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyspresso.transport.Packet">
+<em class="property">class </em><code class="descclassname">pyspresso.transport.</code><code class="descname">Packet</code><a class="headerlink" href="#pyspresso.transport.Packet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Abstract class for a JDWP packet, as defined at
+<a class="reference external" href="http://docs.oracle.com/javase/8/docs/technotes/guides/jpda/jdwp-spec.html">http://docs.oracle.com/javase/8/docs/technotes/guides/jpda/jdwp-spec.html</a></p>
+<dl class="attribute">
+<dt id="pyspresso.transport.Packet.data">
+<code class="descname">data</code><em class="property"> = ''</em><a class="headerlink" href="#pyspresso.transport.Packet.data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Command data or reply data.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.transport.Packet.flags">
+<code class="descname">flags</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.transport.Packet.flags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Packet flags.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.transport.Packet.id">
+<code class="descname">id</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.transport.Packet.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Command/reply packet ID.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.transport.Packet.length">
+<code class="descname">length</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.transport.Packet.length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Length of the packet.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyspresso.transport.ReplyPacket">
+<em class="property">class </em><code class="descclassname">pyspresso.transport.</code><code class="descname">ReplyPacket</code><span class="sig-paren">(</span><em>id</em>, <em>error_code</em>, <em>data=''</em>, <em>flags=128</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.transport.ReplyPacket" title="Permalink to this definition">¶</a></dt>
+<dd><p>A JDWP Reply <a class="reference internal" href="#pyspresso.transport.Packet" title="pyspresso.transport.Packet"><code class="xref any py py-class docutils literal"><span class="pre">Packet</span></code></a>, as defined at
+<a class="reference external" href="http://docs.oracle.com/javase/8/docs/technotes/guides/jpda/jdwp-spec.html">http://docs.oracle.com/javase/8/docs/technotes/guides/jpda/jdwp-spec.html</a></p>
+<dl class="attribute">
+<dt id="pyspresso.transport.ReplyPacket.error_code">
+<code class="descname">error_code</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.transport.ReplyPacket.error_code" title="Permalink to this definition">¶</a></dt>
+<dd><p>Packet&#8217;s error response code.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="events.html" class="btn btn-neutral float-right" title="pyspresso.events" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="debug_interface.html" class="btn btn-neutral" title="pyspresso.debug_interface" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Jason Geffner.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

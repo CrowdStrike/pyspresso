@@ -1,0 +1,279 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pyspresso &mdash; pyspresso 0.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="pyspresso 0.1 documentation" href="#"/>
+        <link rel="next" title="pyspresso.debug_interface" href="debug_interface.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="#" class="icon icon-home"> pyspresso
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="debug_interface.html">pyspresso.debug_interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transport.html">pyspresso.transport</a></li>
+<li class="toctree-l1"><a class="reference internal" href="events.html">pyspresso.events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="event_modifiers.html">pyspresso.event_modifiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="constants.html">pyspresso.constants</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="#">pyspresso</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="#">Docs</a> &raquo;</li>
+      
+    <li>pyspresso</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pyspresso">
+<h1>pyspresso<a class="headerlink" href="#pyspresso" title="Permalink to this headline">¶</a></h1>
+<p>A Python-based framework for debugging Java.</p>
+</div>
+<div class="section" id="modules">
+<h1>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="debug_interface.html">pyspresso.debug_interface</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="transport.html">pyspresso.transport</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="events.html">pyspresso.events</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="event_modifiers.html">pyspresso.event_modifiers</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="constants.html">pyspresso.constants</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="basic-usage">
+<h1>Basic Usage<a class="headerlink" href="#basic-usage" title="Permalink to this headline">¶</a></h1>
+<p>The <a class="reference internal" href="debug_interface.html#pyspresso.debug_interface.DebugInterface" title="pyspresso.debug_interface.DebugInterface"><code class="xref any py py-class docutils literal"><span class="pre">DebugInterface</span></code></a> is the primary interface for interacting with the
+debugged Java process.</p>
+<p>To begin, create a <a class="reference internal" href="debug_interface.html#pyspresso.debug_interface.DebugInterface" title="pyspresso.debug_interface.DebugInterface"><code class="xref any py py-class docutils literal"><span class="pre">DebugInterface</span></code></a> object. The constructor for this class
+allows you to specify a <code class="docutils literal"><span class="pre">&quot;memory&quot;</span></code>- or <code class="docutils literal"><span class="pre">&quot;socket&quot;</span></code>-based transport and a file
+mapping name or network address, respectively.</p>
+<p>The next step is to run your target Java program with the created
+<a class="reference internal" href="debug_interface.html#pyspresso.debug_interface.DebugInterface" title="pyspresso.debug_interface.DebugInterface"><code class="xref any py py-class docutils literal"><span class="pre">DebugInterface</span></code></a> object&#8217;s <a class="reference internal" href="debug_interface.html#pyspresso.debug_interface.DebugInterface.xdebug_arg" title="pyspresso.debug_interface.DebugInterface.xdebug_arg"><code class="xref any py py-attr docutils literal"><span class="pre">xdebug_arg</span></code></a> field value as the value for
+Java&#8217;s <code class="docutils literal"><span class="pre">-Xdebug</span></code> command line argument:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">di</span> <span class="o">=</span> <span class="n">pyspresso</span><span class="o">.</span><span class="n">debug_interface</span><span class="o">.</span><span class="n">DebugInterface</span><span class="p">()</span>
+<span class="n">args</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;java.exe&quot;</span><span class="p">,</span> <span class="s2">&quot;-Xdebug&quot;</span><span class="p">,</span> <span class="n">di</span><span class="o">.</span><span class="n">xdebug_arg</span><span class="p">,</span> <span class="s2">&quot;-jar&quot;</span><span class="p">,</span> <span class="s2">&quot;example.jar&quot;</span><span class="p">]</span>
+<span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Launching Java with the <code class="docutils literal"><span class="pre">-Xdebug</span></code> command line argument causes the target
+program to begin in a suspended state.</p>
+<p>The next step is to attach the <a class="reference internal" href="debug_interface.html#pyspresso.debug_interface.DebugInterface" title="pyspresso.debug_interface.DebugInterface"><code class="xref any py py-class docutils literal"><span class="pre">DebugInterface</span></code></a> object to the created
+process. The call below to <a class="reference internal" href="debug_interface.html#pyspresso.debug_interface.DebugInterface.Utilities.attach" title="pyspresso.debug_interface.DebugInterface.Utilities.attach"><code class="xref any py py-meth docutils literal"><span class="pre">DebugInterface.Utilities.attach</span></code></a> identifies the
+correct target process based on the unique address in <a class="reference internal" href="debug_interface.html#pyspresso.debug_interface.DebugInterface.xdebug_arg" title="pyspresso.debug_interface.DebugInterface.xdebug_arg"><code class="xref any py py-attr docutils literal"><span class="pre">xdebug_arg</span></code></a>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">di</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">attach</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Now that pyspresso&#8217;s <a class="reference internal" href="debug_interface.html#pyspresso.debug_interface.DebugInterface" title="pyspresso.debug_interface.DebugInterface"><code class="xref any py py-class docutils literal"><span class="pre">DebugInterface</span></code></a> is attached to the suspended process,
+you may issue any <a class="reference internal" href="debug_interface.html#pyspresso.debug_interface.DebugInterface" title="pyspresso.debug_interface.DebugInterface"><code class="xref any py py-class docutils literal"><span class="pre">DebugInterface</span></code></a> commands you like, such as setting
+breakpoints, querying the JVM, etc.</p>
+<p>Once you&#8217;ve finished your initialization steps, you can write your debug loop.
+The debug loop consists of receiving a packet from the debuggee, parsing the
+packet&#8217;s <code class="xref py py-class docutils literal"><span class="pre">pyspresso.Event</span></code> values, handling each
+<code class="xref py py-class docutils literal"><span class="pre">pyspresso.Event</span></code> as you see fit, and then resuming the JVM:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="c1"># Get the next event from the event queue.</span>
+    <span class="n">event_packet</span> <span class="o">=</span> <span class="n">di</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">wait_for_event</span><span class="p">()</span>
+
+    <span class="c1"># Extract the suspend policy and all events from the packet.</span>
+    <span class="p">(</span><span class="n">events</span><span class="p">,</span> <span class="n">suspend_policy</span><span class="p">)</span> <span class="o">=</span> <span class="n">di</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">parse_events</span><span class="p">(</span><span class="n">event_packet</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+
+    <span class="c1"># Iterate over each event.</span>
+    <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">events</span><span class="p">:</span>
+        <span class="o">...</span>
+
+    <span class="c1"># Resume the VM as necessary.</span>
+    <span class="k">if</span> <span class="n">suspend_policy</span> <span class="o">==</span> <span class="n">pyspresso</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">SuspendPolicy</span><span class="o">.</span><span class="n">EVENT_THREAD</span><span class="p">:</span>
+        <span class="n">di</span><span class="o">.</span><span class="n">thread_reference</span><span class="o">.</span><span class="n">resume</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">thread</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">suspend_policy</span> <span class="o">==</span> <span class="n">pyspresso</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">SuspendPolicy</span><span class="o">.</span><span class="n">ALL</span><span class="p">:</span>
+        <span class="n">di</span><span class="o">.</span><span class="n">virtual_machine</span><span class="o">.</span><span class="n">resume</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>See the included JavaJournal sample for more details.</p>
+</div>
+<div class="section" id="index">
+<h1>Index<a class="headerlink" href="#index" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
+</ul>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="debug_interface.html" class="btn btn-neutral float-right" title="pyspresso.debug_interface" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Jason Geffner.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

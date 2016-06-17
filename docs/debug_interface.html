@@ -1,0 +1,1713 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pyspresso.debug_interface &mdash; pyspresso 0.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="pyspresso 0.1 documentation" href="index.html"/>
+        <link rel="next" title="pyspresso.transport" href="transport.html"/>
+        <link rel="prev" title="pyspresso" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pyspresso
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">pyspresso.debug_interface</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="transport.html">pyspresso.transport</a></li>
+<li class="toctree-l1"><a class="reference internal" href="events.html">pyspresso.events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="event_modifiers.html">pyspresso.event_modifiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="constants.html">pyspresso.constants</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">pyspresso</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>pyspresso.debug_interface</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pyspresso-debug-interface">
+<h1>pyspresso.debug_interface<a class="headerlink" href="#pyspresso-debug-interface" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul class="simple">
+</ul>
+</div>
+<span class="target" id="module-pyspresso.debug_interface"></span><dl class="class">
+<dt id="pyspresso.debug_interface.Class">
+<em class="property">class </em><code class="descclassname">pyspresso.debug_interface.</code><code class="descname">Class</code><a class="headerlink" href="#pyspresso.debug_interface.Class" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="pyspresso.debug_interface.Class.generic_signature">
+<code class="descname">generic_signature</code><em class="property"> = ''</em><a class="headerlink" href="#pyspresso.debug_interface.Class.generic_signature" title="Permalink to this definition">¶</a></dt>
+<dd><p>The generic signature of the loaded reference type or an empty string
+if there is none.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.Class.ref_type_tag">
+<code class="descname">ref_type_tag</code><em class="property"> = ''</em><a class="headerlink" href="#pyspresso.debug_interface.Class.ref_type_tag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Kind of reference type; one of any <a class="reference internal" href="constants.html#pyspresso.constants.TypeTag" title="pyspresso.constants.TypeTag"><code class="xref any py py-class docutils literal"><span class="pre">TypeTag</span></code></a> values.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.Class.signature">
+<code class="descname">signature</code><em class="property"> = ''</em><a class="headerlink" href="#pyspresso.debug_interface.Class.signature" title="Permalink to this definition">¶</a></dt>
+<dd><p>The JNI signature of the loaded reference type.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.Class.status">
+<code class="descname">status</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.debug_interface.Class.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>The current class status; one of any <a class="reference internal" href="constants.html#pyspresso.constants.ClassStatus" title="pyspresso.constants.ClassStatus"><code class="xref any py py-class docutils literal"><span class="pre">ClassStatus</span></code></a>
+values.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.Class.type_id">
+<code class="descname">type_id</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.debug_interface.Class.type_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Matching loaded reference type.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyspresso.debug_interface.DebugInterface">
+<em class="property">class </em><code class="descclassname">pyspresso.debug_interface.</code><code class="descname">DebugInterface</code><span class="sig-paren">(</span><em>transport=None</em>, <em>server=False</em>, <em>address=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.DebugInterface" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference internal" href="#pyspresso.debug_interface.DebugInterface" title="pyspresso.debug_interface.DebugInterface"><code class="xref any py py-class docutils literal"><span class="pre">DebugInterface</span></code></a> class provides a debug interface on top of
+<a class="reference internal" href="transport.html#pyspresso.transport.DebugTransport" title="pyspresso.transport.DebugTransport"><code class="xref any py py-class docutils literal"><span class="pre">DebugTransport</span></code></a>.</p>
+<p>The <a class="reference internal" href="#pyspresso.debug_interface.DebugInterface" title="pyspresso.debug_interface.DebugInterface"><code class="xref any py py-class docutils literal"><span class="pre">DebugInterface</span></code></a> constructor initializes member variables
+and creates a <a class="reference internal" href="transport.html#pyspresso.transport.DebugTransport" title="pyspresso.transport.DebugTransport"><code class="xref any py py-class docutils literal"><span class="pre">DebugTransport</span></code></a> object accessible as the
+<code class="docutils literal"><span class="pre">transport</span></code> member variable. It also creates the <code class="docutils literal"><span class="pre">xdebug_arg</span></code>
+member variable to be used when running the Java target with the
+<code class="docutils literal"><span class="pre">&quot;-Xdebug&quot;</span></code> command line argument.</p>
+<p>The <em>transport</em> value should be <code class="docutils literal"><span class="pre">&quot;memory&quot;</span></code> for a shared-memory-based
+transport or <code class="docutils literal"><span class="pre">&quot;socket&quot;</span></code> for a socket-based transport.</p>
+<p>If the <em>server</em> value is <code class="docutils literal"><span class="pre">True</span></code> then  the debugger acts as the server
+and the debuggee acts as the client. Otherwise, the debuggee acts as
+the server and the debugger acts as the client.</p>
+<p>The <em>address</em> value should be in the format <code class="docutils literal"><span class="pre">&quot;hostname:port&quot;</span></code> for
+socket-based transport, or should be the shared file mapping name for
+shared-memory-based transport.</p>
+<dl class="class">
+<dt id="pyspresso.debug_interface.DebugInterface.StructSizes">
+<em class="property">class </em><code class="descname">StructSizes</code><a class="headerlink" href="#pyspresso.debug_interface.DebugInterface.StructSizes" title="Permalink to this definition">¶</a></dt>
+<dd><p>JDWP object sizes.</p>
+<p>See details at
+<a class="reference external" href="http://docs.oracle.com/javase/8/docs/technotes/guides/jpda/jdwp-spec.html">http://docs.oracle.com/javase/8/docs/technotes/guides/jpda/jdwp-spec.html</a></p>
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.DebugInterface.StructSizes.field_id">
+<code class="descname">field_id</code><em class="property"> = ''</em><a class="headerlink" href="#pyspresso.debug_interface.DebugInterface.StructSizes.field_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Size of a JDWP <code class="docutils literal"><span class="pre">fieldID</span></code> value in the form of a <code class="docutils literal"><span class="pre">struct</span></code> format
+character (<code class="docutils literal"><span class="pre">&quot;B&quot;</span></code>, <code class="docutils literal"><span class="pre">&quot;I&quot;</span></code>, <code class="docutils literal"><span class="pre">&quot;Q&quot;</span></code>, etc.).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.DebugInterface.StructSizes.frame_id">
+<code class="descname">frame_id</code><em class="property"> = ''</em><a class="headerlink" href="#pyspresso.debug_interface.DebugInterface.StructSizes.frame_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Size of a JDWP <code class="docutils literal"><span class="pre">frameID</span></code> value in the form of a <code class="docutils literal"><span class="pre">struct</span></code> format
+character (<code class="docutils literal"><span class="pre">&quot;B&quot;</span></code>, <code class="docutils literal"><span class="pre">&quot;I&quot;</span></code>, <code class="docutils literal"><span class="pre">&quot;Q&quot;</span></code>, etc.).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.DebugInterface.StructSizes.method_id">
+<code class="descname">method_id</code><em class="property"> = ''</em><a class="headerlink" href="#pyspresso.debug_interface.DebugInterface.StructSizes.method_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Size of a JDWP <code class="docutils literal"><span class="pre">methodID</span></code> value in the form of a <code class="docutils literal"><span class="pre">struct</span></code>
+format character (<code class="docutils literal"><span class="pre">&quot;B&quot;</span></code>, <code class="docutils literal"><span class="pre">&quot;I&quot;</span></code>, <code class="docutils literal"><span class="pre">&quot;Q&quot;</span></code>, etc.).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.DebugInterface.StructSizes.object_id">
+<code class="descname">object_id</code><em class="property"> = ''</em><a class="headerlink" href="#pyspresso.debug_interface.DebugInterface.StructSizes.object_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Size of a JDWP <code class="docutils literal"><span class="pre">objectID</span></code> value in the form of a <code class="docutils literal"><span class="pre">struct</span></code>
+format character (<code class="docutils literal"><span class="pre">&quot;B&quot;</span></code>, <code class="docutils literal"><span class="pre">&quot;I&quot;</span></code>, <code class="docutils literal"><span class="pre">&quot;Q&quot;</span></code>, etc.).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.DebugInterface.StructSizes.reference_type_id">
+<code class="descname">reference_type_id</code><em class="property"> = ''</em><a class="headerlink" href="#pyspresso.debug_interface.DebugInterface.StructSizes.reference_type_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Size of a JDWP <code class="docutils literal"><span class="pre">referenceTypeID</span></code> value in the form of a
+<code class="docutils literal"><span class="pre">struct</span></code> format character (<code class="docutils literal"><span class="pre">&quot;B&quot;</span></code>, <code class="docutils literal"><span class="pre">&quot;I&quot;</span></code>, <code class="docutils literal"><span class="pre">&quot;Q&quot;</span></code>, etc.).</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyspresso.debug_interface.DebugInterface.Utilities">
+<em class="property">class </em><code class="descclassname">DebugInterface.</code><code class="descname">Utilities</code><span class="sig-paren">(</span><em>di</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.DebugInterface.Utilities" title="Permalink to this definition">¶</a></dt>
+<dd><p>Utility functions.</p>
+<dl class="method">
+<dt id="pyspresso.debug_interface.DebugInterface.Utilities.attach">
+<code class="descname">attach</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.DebugInterface.Utilities.attach" title="Permalink to this definition">¶</a></dt>
+<dd><p>Attach to the Java process launced with this
+<a class="reference internal" href="#pyspresso.debug_interface.DebugInterface" title="pyspresso.debug_interface.DebugInterface"><code class="xref any py py-class docutils literal"><span class="pre">DebugInterface</span></code></a> object&#8217;s <a class="reference internal" href="#pyspresso.debug_interface.DebugInterface.xdebug_arg" title="pyspresso.debug_interface.DebugInterface.xdebug_arg"><code class="xref any py py-attr docutils literal"><span class="pre">xdebug_arg</span></code></a> command line
+switch.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.DebugInterface.Utilities.get_method">
+<code class="descname">get_method</code><span class="sig-paren">(</span><em>reference_type_id=0</em>, <em>method_id=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.DebugInterface.Utilities.get_method" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a <a class="reference internal" href="#pyspresso.debug_interface.Method" title="pyspresso.debug_interface.Method"><code class="xref any py py-class docutils literal"><span class="pre">Method</span></code></a> object from a given numeric
+<em>reference_type_id</em> and a given numeric <em>method_id</em>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.DebugInterface.Utilities.get_method_arguments">
+<code class="descname">get_method_arguments</code><span class="sig-paren">(</span><em>thread_id</em>, <em>parameters</em>, <em>mod_bits</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.DebugInterface.Utilities.get_method_arguments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the list of method arguments in a given thread&#8217;s stack
+frame.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.DebugInterface.Utilities.get_string_representation_of_value">
+<code class="descname">get_string_representation_of_value</code><span class="sig-paren">(</span><em>value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.DebugInterface.Utilities.get_string_representation_of_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a string representation of <em>value</em>, a <a class="reference internal" href="#pyspresso.debug_interface.Value" title="pyspresso.debug_interface.Value"><code class="xref any py py-class docutils literal"><span class="pre">Value</span></code></a> value.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.DebugInterface.Utilities.parse_events">
+<code class="descname">parse_events</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.DebugInterface.Utilities.parse_events" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract all events from an event <a class="reference internal" href="transport.html#pyspresso.transport.CommandPacket" title="pyspresso.transport.CommandPacket"><code class="xref any py py-class docutils literal"><span class="pre">CommandPacket</span></code></a> object&#8217;s
+<em>data</em> buffer.</p>
+<p>Returns a tuple. The first value in the tuple is a list of
+<a class="reference internal" href="events.html#pyspresso.events.Event" title="pyspresso.events.Event"><code class="xref py py-class docutils literal"><span class="pre">pyspresso.events.Event</span></code></a> objects; the second value in the
+tuple is the composite event&#8217;s <a class="reference internal" href="constants.html#pyspresso.constants.SuspendPolicy" title="pyspresso.constants.SuspendPolicy"><code class="xref any py py-class docutils literal"><span class="pre">SuspendPolicy</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.DebugInterface.Utilities.parse_jni">
+<code class="descname">parse_jni</code><span class="sig-paren">(</span><em>jni</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.DebugInterface.Utilities.parse_jni" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse a JNI type signature string, such as
+<code class="docutils literal"><span class="pre">&quot;(ILjava/lang/String;[I)J&quot;</span></code>. For details, see
+<a class="reference external" href="https://docs.oracle.com/javase/8/docs/technotes/guides/jni/spec/types.html#type_signatures">https://docs.oracle.com/javase/8/docs/technotes/guides/jni/spec/types.html#type_signatures</a></p>
+<p>Returns a two-value tuple. The first value is a list of method
+<a class="reference internal" href="#pyspresso.debug_interface.Parameter" title="pyspresso.debug_interface.Parameter"><code class="xref any py py-class docutils literal"><span class="pre">Parameter</span></code></a> objects; the second value is a single
+<a class="reference internal" href="#pyspresso.debug_interface.Parameter" title="pyspresso.debug_interface.Parameter"><code class="xref any py py-class docutils literal"><span class="pre">Parameter</span></code></a> representing the method&#8217;s return type.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.DebugInterface.Utilities.wait_for_event">
+<code class="descname">wait_for_event</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.DebugInterface.Utilities.wait_for_event" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wait for the next debug event from the debuggee and return the
+event&#8217;s <a class="reference internal" href="transport.html#pyspresso.transport.CommandPacket" title="pyspresso.transport.CommandPacket"><code class="xref any py py-class docutils literal"><span class="pre">CommandPacket</span></code></a>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.DebugInterface.connected">
+<code class="descclassname">DebugInterface.</code><code class="descname">connected</code><em class="property"> = False</em><a class="headerlink" href="#pyspresso.debug_interface.DebugInterface.connected" title="Permalink to this definition">¶</a></dt>
+<dd><p>Boolean that specifies whether or not this <a class="reference internal" href="#pyspresso.debug_interface.DebugInterface" title="pyspresso.debug_interface.DebugInterface"><code class="xref any py py-class docutils literal"><span class="pre">DebugInterface</span></code></a> is
+connected to the target JVM.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.DebugInterface.event_classes">
+<code class="descclassname">DebugInterface.</code><code class="descname">event_classes</code><em class="property"> = {}</em><a class="headerlink" href="#pyspresso.debug_interface.DebugInterface.event_classes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mapping of <a class="reference internal" href="constants.html#pyspresso.constants.EventKind" title="pyspresso.constants.EventKind"><code class="xref any py py-class docutils literal"><span class="pre">EventKind</span></code></a> to <a class="reference internal" href="events.html#pyspresso.events.Event" title="pyspresso.events.Event"><code class="xref py py-class docutils literal"><span class="pre">pyspresso.events.Event</span></code></a>
+class.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.DebugInterface.jni_tags">
+<code class="descclassname">DebugInterface.</code><code class="descname">jni_tags</code><em class="property"> = {}</em><a class="headerlink" href="#pyspresso.debug_interface.DebugInterface.jni_tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mapping of JNI tags to names and sizes.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.DebugInterface.transport">
+<code class="descclassname">DebugInterface.</code><code class="descname">transport</code><em class="property"> = None</em><a class="headerlink" href="#pyspresso.debug_interface.DebugInterface.transport" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <a class="reference internal" href="transport.html#pyspresso.transport.DebugTransport" title="pyspresso.transport.DebugTransport"><code class="xref any py py-class docutils literal"><span class="pre">DebugTransport</span></code></a> object, initialized by the
+<a class="reference internal" href="#pyspresso.debug_interface.DebugInterface" title="pyspresso.debug_interface.DebugInterface"><code class="xref any py py-class docutils literal"><span class="pre">DebugInterface</span></code></a> constructor.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.DebugInterface.utils">
+<code class="descclassname">DebugInterface.</code><code class="descname">utils</code><em class="property"> = &lt;pyspresso.debug_interface.Utilities instance&gt;</em><a class="headerlink" href="#pyspresso.debug_interface.DebugInterface.utils" title="Permalink to this definition">¶</a></dt>
+<dd><p>Utility functions. Updated by the <a class="reference internal" href="#pyspresso.debug_interface.DebugInterface" title="pyspresso.debug_interface.DebugInterface"><code class="xref any py py-class docutils literal"><span class="pre">DebugInterface</span></code></a> constructor
+with the actual <a class="reference internal" href="#pyspresso.debug_interface.DebugInterface" title="pyspresso.debug_interface.DebugInterface"><code class="xref any py py-class docutils literal"><span class="pre">DebugInterface</span></code></a> object.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.DebugInterface.xdebug_arg">
+<code class="descclassname">DebugInterface.</code><code class="descname">xdebug_arg</code><em class="property"> = ''</em><a class="headerlink" href="#pyspresso.debug_interface.DebugInterface.xdebug_arg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Command line switch to be used when running the Java target with the
+<code class="docutils literal"><span class="pre">&quot;-Xdebug&quot;</span></code> command line argument.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyspresso.debug_interface.Field">
+<em class="property">class </em><code class="descclassname">pyspresso.debug_interface.</code><code class="descname">Field</code><a class="headerlink" href="#pyspresso.debug_interface.Field" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="pyspresso.debug_interface.Field.field_id">
+<code class="descname">field_id</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.debug_interface.Field.field_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Field ID.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.Field.generic_signature">
+<code class="descname">generic_signature</code><em class="property"> = ''</em><a class="headerlink" href="#pyspresso.debug_interface.Field.generic_signature" title="Permalink to this definition">¶</a></dt>
+<dd><p>The generic signature of the field, or an empty string if there is
+none.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.Field.mod_bits">
+<code class="descname">mod_bits</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.debug_interface.Field.mod_bits" title="Permalink to this definition">¶</a></dt>
+<dd><p>The modifier bit flags (also known as access flags) which
+provide additional information on the field declaration.
+Individual flag values are defined in Chapter 4 of The Java
+Virtual Machine Specification. In addition, The 0xf0000000 bit
+identifies the field as synthetic, if the synthetic attribute
+capability (<a class="reference internal" href="#pyspresso.debug_interface.JdwpCommand.VirtualMachine.capabilities" title="pyspresso.debug_interface.JdwpCommand.VirtualMachine.capabilities"><code class="xref any py py-attr docutils literal"><span class="pre">capabilities</span></code></a>) is available.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.Field.name">
+<code class="descname">name</code><em class="property"> = ''</em><a class="headerlink" href="#pyspresso.debug_interface.Field.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of field.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.Field.signature">
+<code class="descname">signature</code><em class="property"> = ''</em><a class="headerlink" href="#pyspresso.debug_interface.Field.signature" title="Permalink to this definition">¶</a></dt>
+<dd><p>JNI Signature of field.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyspresso.debug_interface.JdwpCommand">
+<em class="property">class </em><code class="descclassname">pyspresso.debug_interface.</code><code class="descname">JdwpCommand</code><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class contains Python-wrappers for JDWP commands.</p>
+<p>Most of the docstrings in the subclasses are copied from
+<a class="reference external" href="http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html">http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html</a></p>
+<dl class="class">
+<dt id="pyspresso.debug_interface.JdwpCommand.ArrayReference">
+<em class="property">class </em><code class="descname">ArrayReference</code><span class="sig-paren">(</span><em>di</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ArrayReference" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ArrayReference.get_length">
+<code class="descname">get_length</code><span class="sig-paren">(</span><em>array_object_id=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ArrayReference.get_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of components in a given array.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ArrayReference.get_values">
+<code class="descname">get_values</code><span class="sig-paren">(</span><em>array_object_id=0</em>, <em>first_index=0</em>, <em>length=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ArrayReference.get_values" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a range of array components. The specified range must
+be within the bounds of the array.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ArrayReference.set_values">
+<code class="descname">set_values</code><span class="sig-paren">(</span><em>array_object_id=0</em>, <em>first_index=0</em>, <em>values=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ArrayReference.set_values" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets a range of array components. The specified range must be
+within the bounds of the array. For primitive values, each value&#8217;s
+type must match the array component type exactly. For object
+values, there must be a widening reference conversion from the
+value&#8217;s type to the array component type and the array component
+type must be loaded.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyspresso.debug_interface.JdwpCommand.ArrayType">
+<em class="property">class </em><code class="descclassname">JdwpCommand.</code><code class="descname">ArrayType</code><span class="sig-paren">(</span><em>di</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ArrayType" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ArrayType.create_new_instance">
+<code class="descname">create_new_instance</code><span class="sig-paren">(</span><em>array_type=0</em>, <em>length=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ArrayType.create_new_instance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new array object of this type with a given length.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyspresso.debug_interface.JdwpCommand.ClassLoaderReference">
+<em class="property">class </em><code class="descclassname">JdwpCommand.</code><code class="descname">ClassLoaderReference</code><span class="sig-paren">(</span><em>di</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ClassLoaderReference" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ClassLoaderReference.get_visible_classes">
+<code class="descname">get_visible_classes</code><span class="sig-paren">(</span><em>class_loader_id=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ClassLoaderReference.get_visible_classes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of all classes which this class loader has been
+requested to load. This class loader is considered to be an
+initiating class loader for each class in the returned list. The
+list contains each reference type defined by this loader and any
+types for which loading was delegated by this class loader to
+another class loader.</p>
+<p>The visible class list has useful properties with respect to the
+type namespace. A particular type name will occur at most once in
+the list. Each field or variable declared with that type name in a
+class defined by this class loader must be resolved to that single
+type.</p>
+<p>No ordering of the returned list is guaranteed.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyspresso.debug_interface.JdwpCommand.ClassObjectReference">
+<em class="property">class </em><code class="descclassname">JdwpCommand.</code><code class="descname">ClassObjectReference</code><span class="sig-paren">(</span><em>di</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ClassObjectReference" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ClassObjectReference.get_reflected_type">
+<code class="descname">get_reflected_type</code><span class="sig-paren">(</span><em>class_object_id=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ClassObjectReference.get_reflected_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the reference type reflected by this class object.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyspresso.debug_interface.JdwpCommand.ClassType">
+<em class="property">class </em><code class="descclassname">JdwpCommand.</code><code class="descname">ClassType</code><span class="sig-paren">(</span><em>di</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ClassType" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ClassType.create_new_instance">
+<code class="descname">create_new_instance</code><span class="sig-paren">(</span><em>class_=0</em>, <em>thread=0</em>, <em>method_id=0</em>, <em>arguments=[]</em>, <em>options=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ClassType.create_new_instance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new object of this type, invoking the specified
+constructor.</p>
+<p>For more information, see
+<a class="reference external" href="http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html#JDWP_ClassType_NewInstance">http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html#JDWP_ClassType_NewInstance</a></p>
+<p>Returns a 2-tuple: <code class="docutils literal"><span class="pre">(new_object,</span> <span class="pre">exception)</span></code>, where
+<code class="docutils literal"><span class="pre">new_object</span></code> is a <a class="reference internal" href="#pyspresso.debug_interface.TaggedObjectId" title="pyspresso.debug_interface.TaggedObjectId"><code class="xref any py py-class docutils literal"><span class="pre">TaggedObjectId</span></code></a> and <code class="docutils literal"><span class="pre">exception</span></code> is a
+<a class="reference internal" href="#pyspresso.debug_interface.TaggedObjectId" title="pyspresso.debug_interface.TaggedObjectId"><code class="xref any py py-class docutils literal"><span class="pre">TaggedObjectId</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ClassType.get_superclass">
+<code class="descname">get_superclass</code><span class="sig-paren">(</span><em>class_=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ClassType.get_superclass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the immediate superclass of a class.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ClassType.invoke_method">
+<code class="descname">invoke_method</code><span class="sig-paren">(</span><em>class_=0</em>, <em>thread=0</em>, <em>method_id=0</em>, <em>arguments=[]</em>, <em>options=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ClassType.invoke_method" title="Permalink to this definition">¶</a></dt>
+<dd><p>Invokes a static method.</p>
+<p>For more information, see
+<a class="reference external" href="http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html#JDWP_ClassType_InvokeMethod">http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html#JDWP_ClassType_InvokeMethod</a></p>
+<p>Returns a 2-tuple: <code class="docutils literal"><span class="pre">(return_value,</span> <span class="pre">exception)</span></code>, where <code class="docutils literal"><span class="pre">value</span></code>
+is a <a class="reference internal" href="#pyspresso.debug_interface.Value" title="pyspresso.debug_interface.Value"><code class="xref any py py-class docutils literal"><span class="pre">Value</span></code></a> and <code class="docutils literal"><span class="pre">exception</span></code> is a <a class="reference internal" href="#pyspresso.debug_interface.TaggedObjectId" title="pyspresso.debug_interface.TaggedObjectId"><code class="xref any py py-class docutils literal"><span class="pre">TaggedObjectId</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ClassType.set_values">
+<code class="descname">set_values</code><span class="sig-paren">(</span><em>class_=0</em>, <em>values=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ClassType.set_values" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the value of one or more static fields. Each field must be
+a member of the class type or one of its superclasses,
+superinterfaces, or implemented interfaces. Access control is not
+enforced; for example, the values of private fields can be set.
+Final fields cannot be set. For primitive values, the value&#8217;s type
+must match the field&#8217;s type exactly. For object values, there must
+exist a widening reference conversion from the value&#8217;s type to
+the field&#8217;s type and the field&#8217;s type must be loaded.</p>
+<p>The <em>values</em> list should be a list of objects, where each object
+has attributes <code class="docutils literal"><span class="pre">field_id</span></code> (the field to set) and <code class="docutils literal"><span class="pre">value</span></code> (the
+value to put in the field).</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyspresso.debug_interface.JdwpCommand.EventRequest">
+<em class="property">class </em><code class="descclassname">JdwpCommand.</code><code class="descname">EventRequest</code><span class="sig-paren">(</span><em>di</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.EventRequest" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.EventRequest.clear">
+<code class="descname">clear</code><span class="sig-paren">(</span><em>event_kind=0</em>, <em>request_id=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.EventRequest.clear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clear an event request. See JDWP.EventKind 
+(<a class="reference external" href="http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html#JDWP_EventKind">http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html#JDWP_EventKind</a>)
+for a complete list of events that can be cleared. Only the event
+request matching the specified event kind and requestID is cleared.
+If there isn&#8217;t a matching event request the command is a no-op and
+does not result in an error. Automatically generated events do not
+have a corresponding event request and may not be cleared using
+this command.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.EventRequest.clear_all_breakpoints">
+<code class="descname">clear_all_breakpoints</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.EventRequest.clear_all_breakpoints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes all set breakpoints, a no-op if there are no
+breakpoints set.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.EventRequest.set">
+<code class="descname">set</code><span class="sig-paren">(</span><em>event_kind=0</em>, <em>suspend_policy=2</em>, <em>modifiers=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.EventRequest.set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set an event request. When the event described by this request
+occurs, an event
+(<a class="reference external" href="http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html#JDWP_Event">http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html#JDWP_Event</a>)
+is sent from the target VM. If an event occurs that has not been
+requested then it is not sent from the target VM. The two
+exceptions to this are the VM Start Event and the VM Death Event
+which are automatically generated events - see Composite Command
+(<a class="reference external" href="http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html#JDWP_Event_Composite">http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html#JDWP_Event_Composite</a>)
+for further details.</p>
+<p>The <em>event_kind</em> value should be a defined <a class="reference internal" href="constants.html#pyspresso.constants.EventKind" title="pyspresso.constants.EventKind"><code class="xref any py py-class docutils literal"><span class="pre">EventKind</span></code></a> value.</p>
+<p>The <em>suspend_policy</em> value should be a defined <a class="reference internal" href="constants.html#pyspresso.constants.SuspendPolicy" title="pyspresso.constants.SuspendPolicy"><code class="xref any py py-class docutils literal"><span class="pre">SuspendPolicy</span></code></a>
+value.</p>
+<p>The <em>modifiers</em> value should be a list of event modifier objects,
+whose classes are in <code class="docutils literal"><span class="pre">event_modifiers.py</span></code>.</p>
+<p>The return value is a 32-bit signed request ID.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyspresso.debug_interface.JdwpCommand.InterfaceType">
+<em class="property">class </em><code class="descclassname">JdwpCommand.</code><code class="descname">InterfaceType</code><span class="sig-paren">(</span><em>di</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.InterfaceType" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.InterfaceType.invoke_method">
+<code class="descname">invoke_method</code><span class="sig-paren">(</span><em>class_=0</em>, <em>thread=0</em>, <em>method_id=0</em>, <em>arguments=[]</em>, <em>options=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.InterfaceType.invoke_method" title="Permalink to this definition">¶</a></dt>
+<dd><p>Invokes a static method.</p>
+<p>For more information, see
+<a class="reference external" href="http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html#JDWP_InterfaceType_InvokeMethod">http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html#JDWP_InterfaceType_InvokeMethod</a></p>
+<p>Returns a 2-tuple: <code class="docutils literal"><span class="pre">(return_value,</span> <span class="pre">exception)</span></code>, where <code class="docutils literal"><span class="pre">value</span></code>
+is a <a class="reference internal" href="#pyspresso.debug_interface.Value" title="pyspresso.debug_interface.Value"><code class="xref any py py-class docutils literal"><span class="pre">Value</span></code></a> and <code class="docutils literal"><span class="pre">exception</span></code> is a <a class="reference internal" href="#pyspresso.debug_interface.TaggedObjectId" title="pyspresso.debug_interface.TaggedObjectId"><code class="xref any py py-class docutils literal"><span class="pre">TaggedObjectId</span></code></a>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyspresso.debug_interface.JdwpCommand.Method">
+<em class="property">class </em><code class="descclassname">JdwpCommand.</code><code class="descname">Method</code><span class="sig-paren">(</span><em>di</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.Method" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="class">
+<dt id="pyspresso.debug_interface.JdwpCommand.Method.VariableTable">
+<em class="property">class </em><code class="descname">VariableTable</code><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.Method.VariableTable" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="class">
+<dt id="pyspresso.debug_interface.JdwpCommand.Method.VariableTable.Slot">
+<em class="property">class </em><code class="descname">Slot</code><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.Method.VariableTable.Slot" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="pyspresso.debug_interface.JdwpCommand.Method.VariableTable.Slot.code_index">
+<code class="descname">code_index</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.Method.VariableTable.Slot.code_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>First code index at which the variable is visible
+(unsigned). Used in conjunction with length. The variable can
+be get or set only when the current codeIndex &lt;= current frame
+code index &lt; codeIndex + length.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.JdwpCommand.Method.VariableTable.Slot.generic_signature">
+<code class="descname">generic_signature</code><em class="property"> = ''</em><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.Method.VariableTable.Slot.generic_signature" title="Permalink to this definition">¶</a></dt>
+<dd><p>The variable type&#8217;s generic signature or an empty string if
+there is none.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.JdwpCommand.Method.VariableTable.Slot.length">
+<code class="descname">length</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.Method.VariableTable.Slot.length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unsigned value used in conjunction with codeIndex. The
+variable can be get or set only when the current codeIndex &lt;=
+current frame code index &lt; code index + length.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.JdwpCommand.Method.VariableTable.Slot.name">
+<code class="descname">name</code><em class="property"> = ''</em><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.Method.VariableTable.Slot.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The variable&#8217;s name.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.JdwpCommand.Method.VariableTable.Slot.signature">
+<code class="descname">signature</code><em class="property"> = ''</em><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.Method.VariableTable.Slot.signature" title="Permalink to this definition">¶</a></dt>
+<dd><p>The variable type&#8217;s JNI signature.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.JdwpCommand.Method.VariableTable.Slot.slot">
+<code class="descname">slot</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.Method.VariableTable.Slot.slot" title="Permalink to this definition">¶</a></dt>
+<dd><p>The local variable&#8217;s index in its frame.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.JdwpCommand.Method.VariableTable.arg_cnt">
+<code class="descclassname">JdwpCommand.Method.VariableTable.</code><code class="descname">arg_cnt</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.Method.VariableTable.arg_cnt" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of words in the frame used by arguments. Eight-byte
+arguments use two words; all others use one.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.JdwpCommand.Method.VariableTable.slots">
+<code class="descclassname">JdwpCommand.Method.VariableTable.</code><code class="descname">slots</code><em class="property"> = []</em><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.Method.VariableTable.slots" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of <a class="reference internal" href="#pyspresso.debug_interface.JdwpCommand.Method.VariableTable.Slot" title="pyspresso.debug_interface.JdwpCommand.Method.VariableTable.Slot"><code class="xref any py py-class docutils literal"><span class="pre">Slot</span></code></a> values.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.Method.get_bytecodes">
+<code class="descclassname">JdwpCommand.Method.</code><code class="descname">get_bytecodes</code><span class="sig-paren">(</span><em>ref_type=0</em>, <em>method_id=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.Method.get_bytecodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the method&#8217;s bytecodes as defined in The Java Virtual
+Machine Specification. Requires <code class="docutils literal"><span class="pre">can_get_bytecodes</span></code> capability
+- see <a class="reference internal" href="#pyspresso.debug_interface.JdwpCommand.VirtualMachine.capabilities_new" title="pyspresso.debug_interface.JdwpCommand.VirtualMachine.capabilities_new"><code class="xref any py py-attr docutils literal"><span class="pre">capabilities_new</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.Method.get_line_table">
+<code class="descclassname">JdwpCommand.Method.</code><code class="descname">get_line_table</code><span class="sig-paren">(</span><em>ref_type=0</em>, <em>method_id=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.Method.get_line_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns line number information for the method, if present. The
+line table maps source line numbers to the initial code index of
+the line. The line table is ordered by code index (from lowest to
+highest). The line number information is constant unless a new
+class definition is installed using <a class="reference internal" href="#pyspresso.debug_interface.JdwpCommand.VirtualMachine.redefine_classes" title="pyspresso.debug_interface.JdwpCommand.VirtualMachine.redefine_classes"><code class="xref any py py-meth docutils literal"><span class="pre">redefine_classes</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.Method.get_variable_table">
+<code class="descclassname">JdwpCommand.Method.</code><code class="descname">get_variable_table</code><span class="sig-paren">(</span><em>ref_type=0</em>, <em>method_id=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.Method.get_variable_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns variable information for the method. The variable
+table includes arguments and locals declared within the method. For
+instance methods, the &#8220;this&#8221; reference is included in the table.
+Also, synthetic variables may be present.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.Method.get_variable_table_with_generic">
+<code class="descclassname">JdwpCommand.Method.</code><code class="descname">get_variable_table_with_generic</code><span class="sig-paren">(</span><em>ref_type=0</em>, <em>method_id=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.Method.get_variable_table_with_generic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns variable information for the method, including generic
+signatures for the variables. The variable table includes arguments
+and locals declared within the method. For instance methods, the
+&#8220;this&#8221; reference is included in the table. Also, synthetic
+variables may be present. Generic signatures are described in the
+signature attribute section in The Java Virtual Machine
+Specification. Since JDWP version 1.5.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.Method.is_obsolete">
+<code class="descclassname">JdwpCommand.Method.</code><code class="descname">is_obsolete</code><span class="sig-paren">(</span><em>ref_type=0</em>, <em>method_id=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.Method.is_obsolete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine if this method is obsolete. A method is obsolete if
+it has been replaced by a non-equivalent method using the
+<a class="reference internal" href="#pyspresso.debug_interface.JdwpCommand.VirtualMachine.redefine_classes" title="pyspresso.debug_interface.JdwpCommand.VirtualMachine.redefine_classes"><code class="xref any py py-meth docutils literal"><span class="pre">redefine_classes</span></code></a> command. The original and redefined methods
+are considered equivalent if their bytecodes are the same except
+for indices into the constant pool and the referenced constants are
+equal.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyspresso.debug_interface.JdwpCommand.ObjectReference">
+<em class="property">class </em><code class="descclassname">JdwpCommand.</code><code class="descname">ObjectReference</code><span class="sig-paren">(</span><em>di</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ObjectReference" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ObjectReference.disable_collection">
+<code class="descname">disable_collection</code><span class="sig-paren">(</span><em>object_id=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ObjectReference.disable_collection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prevents garbage collection for the given object. By default
+all objects in back-end replies may be collected at any time the
+target VM is running. A call to this command guarantees that the
+object will not be collected. The <a class="reference internal" href="#pyspresso.debug_interface.JdwpCommand.ObjectReference.enable_collection" title="pyspresso.debug_interface.JdwpCommand.ObjectReference.enable_collection"><code class="xref any py py-meth docutils literal"><span class="pre">enable_collection</span></code></a> command
+can be used to allow collection once again.</p>
+<p>Note that while the target VM is suspended, no garbage collection
+will occur because all threads are suspended. The typical
+examination of variables, fields, and arrays during the suspension
+is safe without explicitly disabling garbage collection.</p>
+<p>This method should be used sparingly, as it alters the pattern of
+garbage collection in the target VM and, consequently, may result
+in application behavior under the debugger that differs from its
+non-debugged behavior.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ObjectReference.enable_collection">
+<code class="descname">enable_collection</code><span class="sig-paren">(</span><em>object_id=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ObjectReference.enable_collection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Permits garbage collection for this object. By default all
+objects returned by JDWP may become unreachable in the target VM,
+and hence may be garbage collected. A call to this command is
+necessary only if garbage collection was previously disabled with
+the <a class="reference internal" href="#pyspresso.debug_interface.JdwpCommand.ObjectReference.disable_collection" title="pyspresso.debug_interface.JdwpCommand.ObjectReference.disable_collection"><code class="xref any py py-meth docutils literal"><span class="pre">disable_collection</span></code></a> command.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ObjectReference.get_monitor_info">
+<code class="descname">get_monitor_info</code><span class="sig-paren">(</span><em>object_id=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ObjectReference.get_monitor_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns monitor information for an object. All threads in the
+VM must be suspended. Requires <code class="docutils literal"><span class="pre">can_get_monitor_info</span></code>
+capability - see <a class="reference internal" href="#pyspresso.debug_interface.JdwpCommand.VirtualMachine.capabilities_new" title="pyspresso.debug_interface.JdwpCommand.VirtualMachine.capabilities_new"><code class="xref any py py-attr docutils literal"><span class="pre">capabilities_new</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ObjectReference.get_reference_type">
+<code class="descname">get_reference_type</code><span class="sig-paren">(</span><em>object_id=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ObjectReference.get_reference_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the runtime type of the object. The runtime type will
+be a class or an array.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ObjectReference.get_referring_objects">
+<code class="descname">get_referring_objects</code><span class="sig-paren">(</span><em>object_id=0</em>, <em>max_referrers=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ObjectReference.get_referring_objects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns objects that directly reference this object. Only
+objects that are reachable for the purposes of garbage collection
+are returned. Note that an object can also be referenced in other
+ways, such as from a local variable in a stack frame, or from a JNI
+global reference. Such non-object referrers are not returned by
+this command.</p>
+<p>Since JDWP version 1.6. Requires <code class="docutils literal"><span class="pre">can_get_instance_info</span></code>
+capability - see <a class="reference internal" href="#pyspresso.debug_interface.JdwpCommand.VirtualMachine.capabilities_new" title="pyspresso.debug_interface.JdwpCommand.VirtualMachine.capabilities_new"><code class="xref any py py-attr docutils literal"><span class="pre">capabilities_new</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ObjectReference.get_values">
+<code class="descname">get_values</code><span class="sig-paren">(</span><em>object_id=0</em>, <em>fields=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ObjectReference.get_values" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the value of one or more instance fields. Each field
+must be member of the object&#8217;s type or one of its superclasses,
+superinterfaces, or implemented interfaces. Access control is not
+enforced; for example, the values of private fields can be
+obtained.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ObjectReference.invoke_method">
+<code class="descname">invoke_method</code><span class="sig-paren">(</span><em>object_id=0</em>, <em>thread=0</em>, <em>class_=0</em>, <em>method_id=0</em>, <em>arguments=[]</em>, <em>options=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ObjectReference.invoke_method" title="Permalink to this definition">¶</a></dt>
+<dd><p>Invokes a static method.</p>
+<p>For more information, see
+<a class="reference external" href="http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html#JDWP_ObjectReference_InvokeMethod">http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html#JDWP_ObjectReference_InvokeMethod</a></p>
+<p>Returns a 2-tuple: <code class="docutils literal"><span class="pre">(return_value,</span> <span class="pre">exception)</span></code>, where <code class="docutils literal"><span class="pre">value</span></code>
+is a <a class="reference internal" href="#pyspresso.debug_interface.Value" title="pyspresso.debug_interface.Value"><code class="xref any py py-class docutils literal"><span class="pre">Value</span></code></a> and <code class="docutils literal"><span class="pre">exception</span></code> is a <a class="reference internal" href="#pyspresso.debug_interface.TaggedObjectId" title="pyspresso.debug_interface.TaggedObjectId"><code class="xref any py py-class docutils literal"><span class="pre">TaggedObjectId</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ObjectReference.is_collected">
+<code class="descname">is_collected</code><span class="sig-paren">(</span><em>object_id=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ObjectReference.is_collected" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines whether an object has been garbage collected in the
+target VM.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ObjectReference.set_values">
+<code class="descname">set_values</code><span class="sig-paren">(</span><em>object_id=0</em>, <em>values=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ObjectReference.set_values" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the value of one or more instance fields. Each field must
+be member of the object&#8217;s type or one of its superclasses,
+superinterfaces, or implemented interfaces. Access control is not
+enforced; for example, the values of private fields can be set. For
+primitive values, the value&#8217;s type must match the field&#8217;s type
+exactly. For object values, there must be a widening reference
+conversion from the value&#8217;s type to thefield&#8217;s type and the field&#8217;s
+type must be loaded.</p>
+<p>The <em>values</em> list should be a list of objects, where each object
+has attributes <code class="docutils literal"><span class="pre">field_id</span></code> (the field to set) and <code class="docutils literal"><span class="pre">value</span></code> (the
+value to put in the field).</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyspresso.debug_interface.JdwpCommand.ReferenceType">
+<em class="property">class </em><code class="descclassname">JdwpCommand.</code><code class="descname">ReferenceType</code><span class="sig-paren">(</span><em>di</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ReferenceType" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ReferenceType.get_class_file_version">
+<code class="descname">get_class_file_version</code><span class="sig-paren">(</span><em>ref_type=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ReferenceType.get_class_file_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the class file major and minor version numbers, as
+defined in the class file format of the Java Virtual Machine
+specification.</p>
+<p>Since JDWP version 1.6.</p>
+<p>Returns a 2-tuple: (major_version, minor_version)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ReferenceType.get_class_loader">
+<code class="descname">get_class_loader</code><span class="sig-paren">(</span><em>ref_type=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ReferenceType.get_class_loader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the instance of java.lang.ClassLoader which loaded a
+given reference type. If the reference type was loaded by the
+system class loader, the returned object ID is null.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ReferenceType.get_class_object">
+<code class="descname">get_class_object</code><span class="sig-paren">(</span><em>ref_type=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ReferenceType.get_class_object" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the class object corresponding to this type.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ReferenceType.get_constant_pool">
+<code class="descname">get_constant_pool</code><span class="sig-paren">(</span><em>ref_type=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ReferenceType.get_constant_pool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the raw bytes of the constant pool in the format of the
+constant_pool item of the Class File Format in The Java Virtual
+Machine Specification.</p>
+<p>Since JDWP version 1.6. Requires <code class="docutils literal"><span class="pre">can_get_constant_pool</span></code>
+capability - see <a class="reference internal" href="#pyspresso.debug_interface.JdwpCommand.VirtualMachine.capabilities_new" title="pyspresso.debug_interface.JdwpCommand.VirtualMachine.capabilities_new"><code class="xref any py py-attr docutils literal"><span class="pre">capabilities_new</span></code></a>.</p>
+<p>Returns the 2-tuple <code class="docutils literal"><span class="pre">(count,</span> <span class="pre">cpbytes)</span></code>, where <code class="docutils literal"><span class="pre">count</span></code> is the
+total number of constant pool entries plus one (this corresponds to
+the constant_pool_count item of the Class File Format in The Java
+Virtual Machine Specification) and <code class="docutils literal"><span class="pre">cpbytes</span></code> contains the raw
+bytes of the constant pool.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ReferenceType.get_fields">
+<code class="descname">get_fields</code><span class="sig-paren">(</span><em>ref_type=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ReferenceType.get_fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns information for each field in a reference type.
+Inherited fields are not included. The field list will include any
+synthetic fields created by the compiler. Fields are returned in
+the order they occur in the class file.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ReferenceType.get_fields_with_generic">
+<code class="descname">get_fields_with_generic</code><span class="sig-paren">(</span><em>ref_type=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ReferenceType.get_fields_with_generic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns information, including the generic signature if any,
+for each field in a reference type. Inherited fields are not
+included. The field list will include any synthetic fields created
+by the compiler. Fields are returned in the order they occur in the
+class file. Generic signatures are described in the signature
+attribute section in The Java Virtual Machine Specification. Since
+JDWP version 1.5.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ReferenceType.get_instances">
+<code class="descname">get_instances</code><span class="sig-paren">(</span><em>ref_type=0</em>, <em>max_instances=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ReferenceType.get_instances" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns instances of this reference type. Only instances that
+are reachable for the purposes of garbage collection are returned.</p>
+<p>Since JDWP version 1.6. Requires <code class="docutils literal"><span class="pre">can_get_instance_info</span></code>
+capability - see <a class="reference internal" href="#pyspresso.debug_interface.JdwpCommand.VirtualMachine.capabilities_new" title="pyspresso.debug_interface.JdwpCommand.VirtualMachine.capabilities_new"><code class="xref any py py-attr docutils literal"><span class="pre">capabilities_new</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ReferenceType.get_interfaces">
+<code class="descname">get_interfaces</code><span class="sig-paren">(</span><em>ref_type=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ReferenceType.get_interfaces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the interfaces declared as implemented by this class.
+Interfaces indirectly implemented (extended by the implemented
+interface or implemented by a superclass) are not included.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ReferenceType.get_methods">
+<code class="descname">get_methods</code><span class="sig-paren">(</span><em>ref_type=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ReferenceType.get_methods" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns information for each method in a reference type.
+Inherited methods are not included. The list of methods will
+include constructors (identified with the name &#8220;&lt;init&gt;&#8221;), the
+initialization method (identified with the name &#8220;&lt;clinit&gt;&#8221;) if
+present, and any synthetic methods created by the compiler.
+Methods are returned in the order they occur in the class file.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ReferenceType.get_methods_with_generic">
+<code class="descname">get_methods_with_generic</code><span class="sig-paren">(</span><em>ref_type=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ReferenceType.get_methods_with_generic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns information, including the generic signature if any,
+for each method in a reference type. Inherited methodss are not 
+included. The list of methods will include constructors (identified
+with the name &#8220;&lt;init&gt;&#8221;), the initialization method (identified with
+the name &#8220;&lt;clinit&gt;&#8221;) if present, and any synthetic methods created
+by the compiler. Methods are returned in the order they occur in
+the class file. Generic signatures are described in the signature
+attribute section in The Java Virtual Machine Specification. Since
+JDWP version 1.5.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ReferenceType.get_modifiers">
+<code class="descname">get_modifiers</code><span class="sig-paren">(</span><em>ref_type</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ReferenceType.get_modifiers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the modifiers (also known as access flags) for a
+reference type. The returned bit mask contains information on the
+declaration of the reference type. If the reference type is an
+array or a primitive class (for example, java.lang.Integer.TYPE),
+the value of the returned bit mask is undefined.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ReferenceType.get_nested_types">
+<code class="descname">get_nested_types</code><span class="sig-paren">(</span><em>ref_type=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ReferenceType.get_nested_types" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the classes and interfaces directly nested within this
+type. Types further nested within those types are not included.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ReferenceType.get_signature">
+<code class="descname">get_signature</code><span class="sig-paren">(</span><em>ref_type=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ReferenceType.get_signature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the JNI signature of a reference type. JNI signature
+formats are described in the Java Native Inteface Specification
+(<a class="reference external" href="http://java.sun.com/products/jdk/1.2/docs/guide/jni/index.html">http://java.sun.com/products/jdk/1.2/docs/guide/jni/index.html</a>).</p>
+<p>For primitive classes the returned signature is the signature of
+the corresponding primitive type; for example, &#8220;I&#8221; is returned as
+the signature of the class represented by java.lang.Integer.TYPE.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ReferenceType.get_signature_with_generic">
+<code class="descname">get_signature_with_generic</code><span class="sig-paren">(</span><em>ref_type=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ReferenceType.get_signature_with_generic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the JNI signature of a reference type along with the
+generic signature if there is one. Generic signatures are described
+in the signature attribute section in The Java Virtual Machine
+Specification. Since JDWP version 1.5.</p>
+<p>Returns a 2-tuple: (signature, generic_signature)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ReferenceType.get_source_debug_extension">
+<code class="descname">get_source_debug_extension</code><span class="sig-paren">(</span><em>ref_type=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ReferenceType.get_source_debug_extension" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the value of the SourceDebugExtension attribute. Since
+JDWP version 1.4. Requires <code class="docutils literal"><span class="pre">can_get_source_debug_extension</span></code>
+capability - see <a class="reference internal" href="#pyspresso.debug_interface.JdwpCommand.VirtualMachine.capabilities_new" title="pyspresso.debug_interface.JdwpCommand.VirtualMachine.capabilities_new"><code class="xref any py py-attr docutils literal"><span class="pre">capabilities_new</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ReferenceType.get_source_file">
+<code class="descname">get_source_file</code><span class="sig-paren">(</span><em>ref_type=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ReferenceType.get_source_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the name of source file in which a reference type was
+declared.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ReferenceType.get_status">
+<code class="descname">get_status</code><span class="sig-paren">(</span><em>ref_type=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ReferenceType.get_status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the current status of the reference type. The status
+indicates the extent to which the reference type has been
+initialized, as described in section 2.1.6 of The Java Virtual
+Machine Specification. If the class is linked the PREPARED and
+VERIFIED bits in the returned status bits will be set. If the class
+is initialized the INITIALIZED bit in the returned status bits will
+be set. If an error occured during initialization then the ERROR
+bit in the returned status bits will be set. The returned status
+bits are undefined for array types and for primitive classes (such
+as java.lang.Integer.TYPE).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ReferenceType.get_values">
+<code class="descname">get_values</code><span class="sig-paren">(</span><em>ref_type=0</em>, <em>fields=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ReferenceType.get_values" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the value of one or more static fields of the reference
+type. Each field must be member of the reference type or one of its
+superclasses, superinterfaces, or implemented interfaces. Access
+control is not enforced; for example, the values of private fields
+can be obtained.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyspresso.debug_interface.JdwpCommand.StackFrame">
+<em class="property">class </em><code class="descclassname">JdwpCommand.</code><code class="descname">StackFrame</code><span class="sig-paren">(</span><em>di</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.StackFrame" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.StackFrame.get_this_object">
+<code class="descname">get_this_object</code><span class="sig-paren">(</span><em>thread_id=0</em>, <em>frame_id=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.StackFrame.get_this_object" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the value of the &#8216;this&#8217; reference for this frame. If
+the frame&#8217;s method is static or native, the reply will contain the
+null object reference.</p>
+<p>The returned value is a <a class="reference internal" href="#pyspresso.debug_interface.TaggedObjectId" title="pyspresso.debug_interface.TaggedObjectId"><code class="xref any py py-class docutils literal"><span class="pre">TaggedObjectId</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.StackFrame.get_values">
+<code class="descname">get_values</code><span class="sig-paren">(</span><em>thread_id=0</em>, <em>frame_id=0</em>, <em>slots=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.StackFrame.get_values" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the value of one or more local variables in a given
+frame. Each variable must be visible at the frame&#8217;s code index.
+Even if local variable information is not available, values can be
+retrieved if the front-end is able to determine the correct local
+variable index. (Typically, this index can be determined for method
+arguments from the method signature without access to the local
+variable table information.)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.StackFrame.pop_frames">
+<code class="descname">pop_frames</code><span class="sig-paren">(</span><em>thread_id=0</em>, <em>frame_id=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.StackFrame.pop_frames" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pop the top-most stack frames of the thread stack, up to, and
+including &#8216;frame&#8217;. The thread must be suspended to perform this
+command. The top-most stack frames are discarded and the stack
+frame previous to &#8216;frame&#8217; becomes the current frame. The operand
+stack is restored &#8211; the argument values are added back and if the
+invoke was not invokestatic, objectref is added back as well. The
+Java virtual machine program counter is restored to the opcode of
+the invoke instruction.</p>
+<p>Since JDWP version 1.4. Requires <code class="docutils literal"><span class="pre">can_pop_frames</span></code> capability -
+see <a class="reference internal" href="#pyspresso.debug_interface.JdwpCommand.VirtualMachine.capabilities_new" title="pyspresso.debug_interface.JdwpCommand.VirtualMachine.capabilities_new"><code class="xref any py py-attr docutils literal"><span class="pre">capabilities_new</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.StackFrame.set_values">
+<code class="descname">set_values</code><span class="sig-paren">(</span><em>thread_id=0</em>, <em>frame_id=0</em>, <em>slot_values=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.StackFrame.set_values" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the value of one or more local variables. Each variable
+must be visible at the current frame code index. For primitive
+values, the value&#8217;s type must match the variable&#8217;s type exactly.
+For object values, there must be a widening reference conversion
+from the value&#8217;s type to thevariable&#8217;s type and the variable&#8217;s type
+must be loaded.</p>
+<p>Even if local variable information is not available, values can be
+set, if the front-end is able to determine the correct local
+variable index. (Typically, thisindex can be determined for method
+arguments from the method signature without access to the local
+variable table information.)</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyspresso.debug_interface.JdwpCommand.StringReference">
+<em class="property">class </em><code class="descclassname">JdwpCommand.</code><code class="descname">StringReference</code><span class="sig-paren">(</span><em>di</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.StringReference" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.StringReference.get_value">
+<code class="descname">get_value</code><span class="sig-paren">(</span><em>string_object_id=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.StringReference.get_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the characters contained in the string.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyspresso.debug_interface.JdwpCommand.ThreadGroupReference">
+<em class="property">class </em><code class="descclassname">JdwpCommand.</code><code class="descname">ThreadGroupReference</code><span class="sig-paren">(</span><em>di</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ThreadGroupReference" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ThreadGroupReference.get_children">
+<code class="descname">get_children</code><span class="sig-paren">(</span><em>thread_group_id=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ThreadGroupReference.get_children" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the live threads and active thread groups directly
+contained in this thread group. Threads and thread groups in child
+thread groups are not included. A thread is alive if it has been
+started and has not yet been stopped. See java.lang.ThreadGroup
+(<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/ThreadGroup.html">http://docs.oracle.com/javase/8/docs/api/java/lang/ThreadGroup.html</a>)
+for information about active ThreadGroups.</p>
+<p>Returns a 2-tuple: <code class="docutils literal"><span class="pre">(child_threads,</span> <span class="pre">child_groups)</span></code>, where
+<code class="docutils literal"><span class="pre">child_threads</span></code> is a list of direct child thread IDs, and
+<code class="docutils literal"><span class="pre">child_groups</span></code> is a list of direct child thread group IDs.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ThreadGroupReference.get_name">
+<code class="descname">get_name</code><span class="sig-paren">(</span><em>thread_group_id=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ThreadGroupReference.get_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the thread group name.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ThreadGroupReference.get_parent">
+<code class="descname">get_parent</code><span class="sig-paren">(</span><em>thread_group_id=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ThreadGroupReference.get_parent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the thread group, if any, which contains a given thread
+group.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyspresso.debug_interface.JdwpCommand.ThreadReference">
+<em class="property">class </em><code class="descclassname">JdwpCommand.</code><code class="descname">ThreadReference</code><span class="sig-paren">(</span><em>di</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ThreadReference" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ThreadReference.force_early_return">
+<code class="descname">force_early_return</code><span class="sig-paren">(</span><em>thread_id=0</em>, <em>value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ThreadReference.force_early_return" title="Permalink to this definition">¶</a></dt>
+<dd><p>Force a method to return before it reaches a return statement.</p>
+<p>For more information, see
+<a class="reference external" href="http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html#JDWP_ThreadReference_ForceEarlyReturn">http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html#JDWP_ThreadReference_ForceEarlyReturn</a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ThreadReference.get_current_contended_monitor">
+<code class="descname">get_current_contended_monitor</code><span class="sig-paren">(</span><em>thread_id=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ThreadReference.get_current_contended_monitor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the object, if any, for which this thread is waiting.
+The thread may be waiting to enter a monitor, or it may be waiting,
+via the java.lang.Object.wait method, for another thread to invoke
+the notify method. The thread must be suspended, and the returned
+information is relevant only while the thread is suspended.
+Requires <code class="docutils literal"><span class="pre">can_get_current_contended_monitor</span></code> capability - see
+<a class="reference internal" href="#pyspresso.debug_interface.JdwpCommand.VirtualMachine.capabilities_new" title="pyspresso.debug_interface.JdwpCommand.VirtualMachine.capabilities_new"><code class="xref any py py-attr docutils literal"><span class="pre">capabilities_new</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ThreadReference.get_frame_count">
+<code class="descname">get_frame_count</code><span class="sig-paren">(</span><em>thread_id=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ThreadReference.get_frame_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the count of frames on this thread&#8217;s stack. The thread
+must be suspended, and the returned count is valid only while the
+thread is suspended. Returns JDWP.Error.errorThreadNotSuspended if
+not suspended.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ThreadReference.get_frames">
+<code class="descname">get_frames</code><span class="sig-paren">(</span><em>thread_id=0</em>, <em>start_frame=0</em>, <em>length=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ThreadReference.get_frames" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the current call stack of a suspended thread. The
+sequence of frames starts with the currently executing frame,
+followed by its caller, and so on. The thread must be suspended,
+and the returned frameID is valid only while the thread is
+suspended.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ThreadReference.get_name">
+<code class="descname">get_name</code><span class="sig-paren">(</span><em>thread_id=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ThreadReference.get_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the thread name.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ThreadReference.get_owned_monitors">
+<code class="descname">get_owned_monitors</code><span class="sig-paren">(</span><em>thread_id=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ThreadReference.get_owned_monitors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the objects whose monitors have been entered by this
+thread. The thread must be suspended, and the returned information
+is relevant only while the thread is suspended. Requires
+<code class="docutils literal"><span class="pre">can_get_owned_monitor_info</span></code> capability - see
+<a class="reference internal" href="#pyspresso.debug_interface.JdwpCommand.VirtualMachine.capabilities_new" title="pyspresso.debug_interface.JdwpCommand.VirtualMachine.capabilities_new"><code class="xref any py py-attr docutils literal"><span class="pre">capabilities_new</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ThreadReference.get_owned_monitors_stack_depth_info">
+<code class="descname">get_owned_monitors_stack_depth_info</code><span class="sig-paren">(</span><em>thread_id=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ThreadReference.get_owned_monitors_stack_depth_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns monitor objects owned by the thread, along with stack
+depth at which the monitor was acquired. Returns stack depth of -1
+if the implementation cannot determine the stack depth (e.g., for
+monitors acquired by JNI MonitorEnter).The thread must be
+suspended, and the returned information is relevant only while the
+thread is suspended. Requires <code class="docutils literal"><span class="pre">can_get_monitor_frame_info</span></code>
+capability - see <a class="reference internal" href="#pyspresso.debug_interface.JdwpCommand.VirtualMachine.capabilities_new" title="pyspresso.debug_interface.JdwpCommand.VirtualMachine.capabilities_new"><code class="xref any py py-attr docutils literal"><span class="pre">capabilities_new</span></code></a>.</p>
+<p>Since JDWP version 1.6.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ThreadReference.get_status">
+<code class="descname">get_status</code><span class="sig-paren">(</span><em>thread_id=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ThreadReference.get_status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the current status of a thread. The thread status reply
+indicates the thread status the last time it was running. The
+suspend status provides information on the thread&#8217;s suspension, if
+any.</p>
+<p>Returns a 2-tuple: <code class="docutils literal"><span class="pre">(thread_status,</span> <span class="pre">suspend_status)</span></code>, where
+<code class="docutils literal"><span class="pre">thread_status</span></code> is of type <a class="reference internal" href="constants.html#pyspresso.constants.ThreadStatus" title="pyspresso.constants.ThreadStatus"><code class="xref any py py-class docutils literal"><span class="pre">ThreadStatus</span></code></a> and
+<code class="docutils literal"><span class="pre">suspend_status</span></code> is of type <a class="reference internal" href="constants.html#pyspresso.constants.SuspendStatus" title="pyspresso.constants.SuspendStatus"><code class="xref any py py-class docutils literal"><span class="pre">SuspendStatus</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ThreadReference.get_suspend_count">
+<code class="descname">get_suspend_count</code><span class="sig-paren">(</span><em>thread_id=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ThreadReference.get_suspend_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the suspend count for this thread. The suspend count is the
+number of times the thread has been suspended through the
+thread-level or VM-level suspend commands without a corresponding
+resume.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ThreadReference.get_thread_group">
+<code class="descname">get_thread_group</code><span class="sig-paren">(</span><em>thread_id=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ThreadReference.get_thread_group" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the thread group that contains a given thread.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ThreadReference.interrupt">
+<code class="descname">interrupt</code><span class="sig-paren">(</span><em>thread_id=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ThreadReference.interrupt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interrupt the thread, as if done by java.lang.Thread.interrupt.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ThreadReference.resume">
+<code class="descname">resume</code><span class="sig-paren">(</span><em>thread_id=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ThreadReference.resume" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resumes the execution of a given thread. If this thread was not
+previously suspended by the front-end, calling this command has no
+effect. Otherwise, the count of pending suspends on this thread is
+decremented. If it is decremented to 0, the thread will continue to
+execute.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ThreadReference.stop">
+<code class="descname">stop</code><span class="sig-paren">(</span><em>thread_id=0</em>, <em>throwable=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ThreadReference.stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops the thread with an asynchronous exception, as if done by
+java.lang.Thread.stop.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.ThreadReference.suspend">
+<code class="descname">suspend</code><span class="sig-paren">(</span><em>thread_id=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.ThreadReference.suspend" title="Permalink to this definition">¶</a></dt>
+<dd><p>Suspends the thread.</p>
+<p>Unlike java.lang.Thread.suspend(), suspends of both the virtual
+machine and individual threads are counted. Before a thread will
+run again, it must be resumed the same number of times it has been
+suspended.</p>
+<p>Suspending single threads with command has the same dangers
+java.lang.Thread.suspend(). If the suspended thread holds a monitor
+needed by another running thread, deadlock is possible in the
+target VM (at least until the suspended thread is resumed again).</p>
+<p>The suspended thread is guaranteed to remain suspended until
+resumed through one of the JDI resume methods mentioned above; the
+application in the target VM cannot resume the suspended thread
+through <a class="reference external" href="mailto:{&#37;&#52;&#48;link">{<span>&#64;</span>link</a> java.lang.Thread#resume}.</p>
+<p>Note that this doesn&#8217;t change the status of the thread (see the
+<a class="reference internal" href="#pyspresso.debug_interface.JdwpCommand.ThreadReference.get_status" title="pyspresso.debug_interface.JdwpCommand.ThreadReference.get_status"><code class="xref any py py-meth docutils literal"><span class="pre">get_status</span></code></a> command.) For example, if it was Running, it will
+still appear running to other threads.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyspresso.debug_interface.JdwpCommand.VirtualMachine">
+<em class="property">class </em><code class="descclassname">JdwpCommand.</code><code class="descname">VirtualMachine</code><span class="sig-paren">(</span><em>di</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.VirtualMachine" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="pyspresso.debug_interface.JdwpCommand.VirtualMachine.all_classes">
+<code class="descname">all_classes</code><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.VirtualMachine.all_classes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns reference types for all classes currently loaded by the
+target VM.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.JdwpCommand.VirtualMachine.all_classes_with_generic">
+<code class="descname">all_classes_with_generic</code><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.VirtualMachine.all_classes_with_generic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns reference types for all classes currently loaded by the
+target VM. Both the JNI signature and the generic signature are
+returned for each class. Generic signatures are described in the
+signature attribute section in The Java Virtual Machine
+Specification. Since JDWP version 1.5.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.JdwpCommand.VirtualMachine.all_threads">
+<code class="descname">all_threads</code><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.VirtualMachine.all_threads" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns all threads currently running in the target VM. The
+returned list contains threads created through java.lang.Thread,
+all native threads attached to the target VM through JNI, and
+system threads created by the target VM. Threads that have not yet
+been started and threads that have completed their execution are
+not included in the returned list.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.JdwpCommand.VirtualMachine.capabilities">
+<code class="descname">capabilities</code><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.VirtualMachine.capabilities" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve this VM&#8217;s capabilities. The capabilities are returned
+as booleans, each indicating the presence or absence of a
+capability. The commands associated with each capability will
+return the NOT_IMPLEMENTED error if the cabability is not
+available.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.JdwpCommand.VirtualMachine.capabilities_new">
+<code class="descname">capabilities_new</code><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.VirtualMachine.capabilities_new" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve all of this VM&#8217;s capabilities. The capabilities are
+returned as booleans, each indicating the presence or absence of a
+capability. The commands associated with each capability will
+return the NOT_IMPLEMENTED error if the cabability is not
+available. Since JDWP version 1.4.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.JdwpCommand.VirtualMachine.class_paths">
+<code class="descname">class_paths</code><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.VirtualMachine.class_paths" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the classpath and bootclasspath of the target VM. If
+the classpath is not defined, returns an empty list. If the
+bootclasspath is not defined returns an empty list.</p>
+<p>Returns a 3-tuple of (base_directory, class_paths,
+boot_class_paths).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.VirtualMachine.create_string">
+<code class="descname">create_string</code><span class="sig-paren">(</span><em>string=''</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.VirtualMachine.create_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new UTF-8 <em>string</em> object in the target VM and
+returns its id.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.JdwpCommand.VirtualMachine.default_stratum">
+<code class="descname">default_stratum</code><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.VirtualMachine.default_stratum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the default stratum. Requires <code class="docutils literal"><span class="pre">can_set_default_stratum</span></code>
+capability - see <a class="reference internal" href="#pyspresso.debug_interface.JdwpCommand.VirtualMachine.capabilities_new" title="pyspresso.debug_interface.JdwpCommand.VirtualMachine.capabilities_new"><code class="xref any py py-attr docutils literal"><span class="pre">capabilities_new</span></code></a>.</p>
+<p>Note that this is a write-only attribute.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.VirtualMachine.dispose">
+<code class="descname">dispose</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.VirtualMachine.dispose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Invalidates this virtual machine mirror. The communication
+channel to the target VM is closed, and the target VM prepares to
+accept another subsequent connection from this debugger or another
+debugger.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.VirtualMachine.dispose_objects">
+<code class="descname">dispose_objects</code><span class="sig-paren">(</span><em>objects=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.VirtualMachine.dispose_objects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Releases a list of object IDs. For each object in the list,
+the following applies. The count of references held by the back-end
+(the reference count) will be decremented by refCnt. If thereafter
+the reference count is less than or equal to zero, the ID is freed.
+Any back-end resources associated with the freed ID may be freed,
+and if garbage collection was disabled for the object, it will be
+re-enabled. The sender of this command promises that no further
+commands will be sent referencing a freed ID.</p>
+<p>Use of this command is not required. If it is not sent, resources
+associated with each ID will be freed by the back-end at some time
+after the corresponding object is garbage collected. It is most
+useful to use this command to reduce the load on the back-end if a
+very large number of objects has been retrieved from the back-end
+(a large array, for example) but may not be garbage collected any
+time soon.</p>
+<p>IDs may be re-used by the back-end after they have been freed with
+this command.This description assumes reference counting, a
+back-end may use any implementation which operates equivalently.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.VirtualMachine.exit">
+<code class="descname">exit</code><span class="sig-paren">(</span><em>exit_code=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.VirtualMachine.exit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Terminates the target VM with the given <em>exit_code</em>. On some
+platforms, the exit code might be truncated, for example, to the
+low order 8 bits. All ids previously returned from the target VM
+become invalid. Threads running in the VM are abruptly terminated.
+A thread death exception is not thrown and finally blocks are not
+run.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.VirtualMachine.get_classes_by_signature">
+<code class="descname">get_classes_by_signature</code><span class="sig-paren">(</span><em>signature=''</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.VirtualMachine.get_classes_by_signature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns reference types for all the classes loaded by the
+target VM which match the given <em>signature</em>. Multple reference
+types will be returned if two or more class loaders have loaded a
+class of the same name. The search is confined to loaded classes
+only; no attempt is made to load a class of the given signature.</p>
+<p>The <em>signature</em> value is the JNI signature of the class to find
+(for example, <code class="docutils literal"><span class="pre">&quot;Ljava/lang/String;&quot;</span></code>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.VirtualMachine.get_instance_counts">
+<code class="descname">get_instance_counts</code><span class="sig-paren">(</span><em>reference_types=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.VirtualMachine.get_instance_counts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of instances of each reference type in the
+input list. Only instances that are reachable for the purposes of
+garbage collection are counted. If a reference type is invalid, eg.
+it has been unloaded, zero is returned for its instance count.</p>
+<p>Since JDWP version 1.6. Requires <code class="docutils literal"><span class="pre">can_get_instance_info</span></code>
+capability - see <a class="reference internal" href="#pyspresso.debug_interface.JdwpCommand.VirtualMachine.capabilities_new" title="pyspresso.debug_interface.JdwpCommand.VirtualMachine.capabilities_new"><code class="xref any py py-attr docutils literal"><span class="pre">capabilities_new</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.VirtualMachine.hold_events">
+<code class="descname">hold_events</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.VirtualMachine.hold_events" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tells the target VM to stop sending events. Events are not
+discarded; they are held until a subsequent ReleaseEvents command
+is sent. This command is useful to control the number of events
+sent to the debugger VM in situations where very large numbers of
+events are generated. While events are held by the debugger
+back-end, application execution may be frozen by the debugger
+back-end to prevent buffer overflows on the back end. Responses to
+commands are never held and are not affected by this command. If
+events are already being held, this command is ignored.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.JdwpCommand.VirtualMachine.id_sizes">
+<code class="descname">id_sizes</code><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.VirtualMachine.id_sizes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the sizes of variably-sized data types in the target
+VM.The returned values indicate the number of bytes used by the
+identifiers in command and reply packets.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.VirtualMachine.redefine_classes">
+<code class="descname">redefine_classes</code><span class="sig-paren">(</span><em>classes=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.VirtualMachine.redefine_classes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Installs new class definitions. If there are active stack
+frames in methods of the redefined classes in the target VM then
+those active frames continue to run the bytecodes of the original
+method. These methods are considered obsolete - see
+<a class="reference internal" href="#pyspresso.debug_interface.JdwpCommand.Method.is_obsolete" title="pyspresso.debug_interface.JdwpCommand.Method.is_obsolete"><code class="xref any py py-meth docutils literal"><span class="pre">is_obsolete</span></code></a>. The methods in the redefined classes will be
+used for new invokes in the target VM. The original method ID
+refers to the redefined method. All breakpoints in the redefined
+classes are cleared. If resetting of stack frames is desired, the
+<a class="reference internal" href="#pyspresso.debug_interface.JdwpCommand.StackFrame.pop_frames" title="pyspresso.debug_interface.JdwpCommand.StackFrame.pop_frames"><code class="xref any py py-meth docutils literal"><span class="pre">pop_frames</span></code></a> command can be used to pop frames with obsolete
+methods.</p>
+<p>Requires <code class="docutils literal"><span class="pre">can_redefine_classes</span></code> capability - see
+<a class="reference internal" href="#pyspresso.debug_interface.JdwpCommand.VirtualMachine.capabilities_new" title="pyspresso.debug_interface.JdwpCommand.VirtualMachine.capabilities_new"><code class="xref any py py-attr docutils literal"><span class="pre">capabilities_new</span></code></a>. In addition to the canRedefineClasses
+capability, the target VM must have the canAddMethod capability to
+add methods when redefining classes, or the
+canUnrestrictedlyRedefineClasses to redefine classes in arbitrary
+ways.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.VirtualMachine.release_events">
+<code class="descname">release_events</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.VirtualMachine.release_events" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tells the target VM to continue sending events. This command
+is used to restore normal activity after a HoldEvents command.
+If there is no current HoldEvents command in effect, this command
+is ignored.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.VirtualMachine.resume">
+<code class="descname">resume</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.VirtualMachine.resume" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resumes execution of the application after the suspend command
+or an event has stopped it. Suspensions of the Virtual Machine and
+individual threads are counted. If a particular thread is suspended
+n times, it must resumed n times before it will continue.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyspresso.debug_interface.JdwpCommand.VirtualMachine.suspend">
+<code class="descname">suspend</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.VirtualMachine.suspend" title="Permalink to this definition">¶</a></dt>
+<dd><p>Suspends the execution of the application running in the target
+VM. All Java threads currently running will be suspended.</p>
+<p>Unlike java.lang.Thread.suspend, suspends of both the virtual
+machine and individual threads are counted. Before a thread will
+run again, it must be resumed through the VM-level resume
+(<a class="reference external" href="http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html#JDWP_VirtualMachine_Resume">http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html#JDWP_VirtualMachine_Resume</a>)
+command or the thread-level resume
+(<a class="reference external" href="http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html#JDWP_ThreadReference_Resume">http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html#JDWP_ThreadReference_Resume</a>)
+command the same number of times it has been suspended.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.JdwpCommand.VirtualMachine.top_level_thread_groups">
+<code class="descname">top_level_thread_groups</code><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.VirtualMachine.top_level_thread_groups" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns all thread groups that do not have a parent. This
+command may be used as the first step in building a tree (or trees)
+of the existing thread groups.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.JdwpCommand.VirtualMachine.version">
+<code class="descname">version</code><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommand.VirtualMachine.version" title="Permalink to this definition">¶</a></dt>
+<dd><p>The JDWP version implemented by the target VM. The version
+string format is implementation dependent.</p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="pyspresso.debug_interface.JdwpCommandError">
+<em class="property">exception </em><code class="descclassname">pyspresso.debug_interface.</code><code class="descname">JdwpCommandError</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JdwpCommandError" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pyspresso.debug_interface.JniTag">
+<em class="property">class </em><code class="descclassname">pyspresso.debug_interface.</code><code class="descname">JniTag</code><span class="sig-paren">(</span><em>tag</em>, <em>name</em>, <em>size</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.JniTag" title="Permalink to this definition">¶</a></dt>
+<dd><p><a class="reference external" href="https://docs.oracle.com/javase/8/docs/technotes/guides/jni/spec/types.html">https://docs.oracle.com/javase/8/docs/technotes/guides/jni/spec/types.html</a></p>
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.JniTag.name">
+<code class="descname">name</code><em class="property"> = ''</em><a class="headerlink" href="#pyspresso.debug_interface.JniTag.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Human-readable Java type string.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.JniTag.size">
+<code class="descname">size</code><em class="property"> = ''</em><a class="headerlink" href="#pyspresso.debug_interface.JniTag.size" title="Permalink to this definition">¶</a></dt>
+<dd><p>The size of the type as a <code class="docutils literal"><span class="pre">struct</span></code> format character.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.JniTag.tag">
+<code class="descname">tag</code><em class="property"> = ''</em><a class="headerlink" href="#pyspresso.debug_interface.JniTag.tag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Single-character type signature representation.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyspresso.debug_interface.Location">
+<em class="property">class </em><code class="descclassname">pyspresso.debug_interface.</code><code class="descname">Location</code><span class="sig-paren">(</span><em>di</em>, <em>type=0</em>, <em>class_id=0</em>, <em>method_id=0</em>, <em>index=0</em>, <em>location=''</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.Location" title="Permalink to this definition">¶</a></dt>
+<dd><p>An executable location as defined by JDWP. For details, see
+<a class="reference external" href="http://docs.oracle.com/javase/8/docs/technotes/guides/jpda/jdwp-spec.html">http://docs.oracle.com/javase/8/docs/technotes/guides/jpda/jdwp-spec.html</a></p>
+<p>The <a class="reference internal" href="#pyspresso.debug_interface.Location" title="pyspresso.debug_interface.Location"><code class="xref any py py-class docutils literal"><span class="pre">Location</span></code></a> constructor constructs a <a class="reference internal" href="#pyspresso.debug_interface.Location" title="pyspresso.debug_interface.Location"><code class="xref any py py-class docutils literal"><span class="pre">Location</span></code></a> object
+from either a <em>location</em> byte string <strong>or</strong> from a <em>type</em>, <em>class_id</em>,
+<em>method_id</em>, and <em>index</em>.</p>
+<p>The <em>di</em> value must be a reference to a <a class="reference internal" href="#pyspresso.debug_interface.DebugInterface" title="pyspresso.debug_interface.DebugInterface"><code class="xref any py py-class docutils literal"><span class="pre">DebugInterface</span></code></a> object.</p>
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.Location.class_id">
+<code class="descname">class_id</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.debug_interface.Location.class_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A JDWP <code class="docutils literal"><span class="pre">classID</span></code> value.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.Location.index">
+<code class="descname">index</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.debug_interface.Location.index" title="Permalink to this definition">¶</a></dt>
+<dd><p>An index that identifies a location within the method.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.Location.location">
+<code class="descname">location</code><em class="property"> = ''</em><a class="headerlink" href="#pyspresso.debug_interface.Location.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>The raw interpretation of this location as a JDWP byte string.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.Location.method_id">
+<code class="descname">method_id</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.debug_interface.Location.method_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A JDWP <code class="docutils literal"><span class="pre">methodID</span></code> value.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.Location.type">
+<code class="descname">type</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.debug_interface.Location.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <a class="reference internal" href="constants.html#pyspresso.constants.TypeTag" title="pyspresso.constants.TypeTag"><code class="xref any py py-class docutils literal"><span class="pre">TypeTag</span></code></a> value.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyspresso.debug_interface.Method">
+<em class="property">class </em><code class="descclassname">pyspresso.debug_interface.</code><code class="descname">Method</code><a class="headerlink" href="#pyspresso.debug_interface.Method" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference internal" href="#pyspresso.debug_interface.Method" title="pyspresso.debug_interface.Method"><code class="xref any py py-class docutils literal"><span class="pre">Method</span></code></a> class defines a Java method.</p>
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.Method.generic_signature">
+<code class="descname">generic_signature</code><em class="property"> = ''</em><a class="headerlink" href="#pyspresso.debug_interface.Method.generic_signature" title="Permalink to this definition">¶</a></dt>
+<dd><p>The generic signature of the method, or an empty string if there is
+none.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.Method.method_id">
+<code class="descname">method_id</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.debug_interface.Method.method_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method ID.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.Method.mod_bits">
+<code class="descname">mod_bits</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.debug_interface.Method.mod_bits" title="Permalink to this definition">¶</a></dt>
+<dd><p>The modifier bit flags (also known as access flags) which
+provide additional information on the field declaration.
+Individual flag values are defined in Chapter 4 of The Java
+Virtual Machine Specification. In addition, The 0xf0000000 bit
+identifies the field as synthetic, if the synthetic attribute
+capability (<a class="reference internal" href="#pyspresso.debug_interface.JdwpCommand.VirtualMachine.capabilities" title="pyspresso.debug_interface.JdwpCommand.VirtualMachine.capabilities"><code class="xref any py py-attr docutils literal"><span class="pre">capabilities</span></code></a>) is available.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.Method.name">
+<code class="descname">name</code><em class="property"> = ''</em><a class="headerlink" href="#pyspresso.debug_interface.Method.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of method.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.Method.signature">
+<code class="descname">signature</code><em class="property"> = ''</em><a class="headerlink" href="#pyspresso.debug_interface.Method.signature" title="Permalink to this definition">¶</a></dt>
+<dd><p>JNI signature of method.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyspresso.debug_interface.Parameter">
+<em class="property">class </em><code class="descclassname">pyspresso.debug_interface.</code><code class="descname">Parameter</code><span class="sig-paren">(</span><em>tag=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.Parameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>A method parameter.</p>
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.Parameter.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pyspresso.debug_interface.Parameter.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>A string that represents the name of the parameter, or <code class="docutils literal"><span class="pre">None</span></code> if no
+name can be determined.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.Parameter.tag">
+<code class="descname">tag</code><em class="property"> = None</em><a class="headerlink" href="#pyspresso.debug_interface.Parameter.tag" title="Permalink to this definition">¶</a></dt>
+<dd><p>The parameter&#8217;s <a class="reference internal" href="#pyspresso.debug_interface.JniTag" title="pyspresso.debug_interface.JniTag"><code class="xref any py py-class docutils literal"><span class="pre">JniTag</span></code></a>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyspresso.debug_interface.ReferenceType">
+<em class="property">class </em><code class="descclassname">pyspresso.debug_interface.</code><code class="descname">ReferenceType</code><a class="headerlink" href="#pyspresso.debug_interface.ReferenceType" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="pyspresso.debug_interface.ReferenceType.ref_type_tag">
+<code class="descname">ref_type_tag</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.debug_interface.ReferenceType.ref_type_tag" title="Permalink to this definition">¶</a></dt>
+<dd><p><a class="reference internal" href="constants.html#pyspresso.constants.TypeTag" title="pyspresso.constants.TypeTag"><code class="xref any py py-class docutils literal"><span class="pre">TypeTag</span></code></a> of following reference type.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.ReferenceType.type_id">
+<code class="descname">type_id</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.debug_interface.ReferenceType.type_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reference type ID.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyspresso.debug_interface.TaggedObjectId">
+<em class="property">class </em><code class="descclassname">pyspresso.debug_interface.</code><code class="descname">TaggedObjectId</code><a class="headerlink" href="#pyspresso.debug_interface.TaggedObjectId" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="pyspresso.debug_interface.TaggedObjectId.object_id">
+<code class="descname">object_id</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.debug_interface.TaggedObjectId.object_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Object ID.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.TaggedObjectId.tag">
+<code class="descname">tag</code><em class="property"> = ''</em><a class="headerlink" href="#pyspresso.debug_interface.TaggedObjectId.tag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Single-character type signature representation.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyspresso.debug_interface.Value">
+<em class="property">class </em><code class="descclassname">pyspresso.debug_interface.</code><code class="descname">Value</code><span class="sig-paren">(</span><em>tag=''</em>, <em>value=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyspresso.debug_interface.Value" title="Permalink to this definition">¶</a></dt>
+<dd><p>A value retrieved from the target VM.</p>
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.Value.tag">
+<code class="descname">tag</code><em class="property"> = ''</em><a class="headerlink" href="#pyspresso.debug_interface.Value.tag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Single-character type signature representation.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.debug_interface.Value.value">
+<code class="descname">value</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.debug_interface.Value.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>An object ID or a primitive value.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="transport.html" class="btn btn-neutral float-right" title="pyspresso.transport" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="pyspresso" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Jason Geffner.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

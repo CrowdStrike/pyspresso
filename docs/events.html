@@ -1,0 +1,827 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pyspresso.events &mdash; pyspresso 0.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="pyspresso 0.1 documentation" href="index.html"/>
+        <link rel="next" title="pyspresso.event_modifiers" href="event_modifiers.html"/>
+        <link rel="prev" title="pyspresso.transport" href="transport.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pyspresso
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="debug_interface.html">pyspresso.debug_interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transport.html">pyspresso.transport</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">pyspresso.events</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="event_modifiers.html">pyspresso.event_modifiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="constants.html">pyspresso.constants</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">pyspresso</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>pyspresso.events</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pyspresso-events">
+<h1>pyspresso.events<a class="headerlink" href="#pyspresso-events" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul class="simple">
+</ul>
+</div>
+<span class="target" id="module-pyspresso.events"></span><dl class="class">
+<dt id="pyspresso.events.Breakpoint">
+<em class="property">class </em><code class="descclassname">pyspresso.events.</code><code class="descname">Breakpoint</code><a class="headerlink" href="#pyspresso.events.Breakpoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Notification of a breakpoint in the target VM. The breakpoint event is
+generated before the code at its location is executed.</p>
+<dl class="attribute">
+<dt id="pyspresso.events.Breakpoint.event_kind">
+<code class="descname">event_kind</code><em class="property"> = 2</em><a class="headerlink" href="#pyspresso.events.Breakpoint.event_kind" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.Breakpoint.location">
+<code class="descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pyspresso.events.Breakpoint.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>Location hit.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.Breakpoint.thread">
+<code class="descname">thread</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.events.Breakpoint.thread" title="Permalink to this definition">¶</a></dt>
+<dd><p>Thread which hit breakpoint.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyspresso.events.ClassPrepare">
+<em class="property">class </em><code class="descclassname">pyspresso.events.</code><code class="descname">ClassPrepare</code><a class="headerlink" href="#pyspresso.events.ClassPrepare" title="Permalink to this definition">¶</a></dt>
+<dd><p>Notification of a class prepare in the target VM. See the JVM
+specification for a definition of class preparation. Class prepare events
+are not generated for primtiive classes (for example,
+java.lang.Integer.TYPE).</p>
+<dl class="attribute">
+<dt id="pyspresso.events.ClassPrepare.event_kind">
+<code class="descname">event_kind</code><em class="property"> = 8</em><a class="headerlink" href="#pyspresso.events.ClassPrepare.event_kind" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.ClassPrepare.ref_type_tag">
+<code class="descname">ref_type_tag</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.events.ClassPrepare.ref_type_tag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Kind of reference type. See JDWP.TypeTag
+(<a class="reference external" href="http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html#JDWP_TypeTag">http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html#JDWP_TypeTag</a>).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.ClassPrepare.signature">
+<code class="descname">signature</code><em class="property"> = ''</em><a class="headerlink" href="#pyspresso.events.ClassPrepare.signature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type signature.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.ClassPrepare.status">
+<code class="descname">status</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.events.ClassPrepare.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Status of type. See JDWP.ClassStatus
+(<a class="reference external" href="http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html#JDWP_ClassStatus">http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html#JDWP_ClassStatus</a>).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.ClassPrepare.thread">
+<code class="descname">thread</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.events.ClassPrepare.thread" title="Permalink to this definition">¶</a></dt>
+<dd><p>Preparing thread. In rare cases, this event may occur in a debugger
+system thread within the target VM. Debugger threads take precautions to
+prevent these events, but they cannot be avoided under some conditions,
+especially for some subclasses of java.lang.Error. If the event was
+generated by a debugger system thread, the value returned by this method is
+null, and if the requested suspend policy
+(<a class="reference external" href="http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html#JDWP_SuspendPolicy">http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html#JDWP_SuspendPolicy</a>)
+for the event was EVENT_THREAD all threads will be suspended instead, and
+the composite event&#8217;s suspend policy will reflect this change.</p>
+<p>Note that the discussion above does not apply to system threads created by
+the target VM during its normal (non-debug) operation.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.ClassPrepare.type_id">
+<code class="descname">type_id</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.events.ClassPrepare.type_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type being prepared.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyspresso.events.ClassUnload">
+<em class="property">class </em><code class="descclassname">pyspresso.events.</code><code class="descname">ClassUnload</code><a class="headerlink" href="#pyspresso.events.ClassUnload" title="Permalink to this definition">¶</a></dt>
+<dd><p>Notification of a class unload in the target VM.</p>
+<p>There are severe constraints on the debugger back-end during garbage
+collection, so unload information is greatly limited.</p>
+<dl class="attribute">
+<dt id="pyspresso.events.ClassUnload.event_kind">
+<code class="descname">event_kind</code><em class="property"> = 9</em><a class="headerlink" href="#pyspresso.events.ClassUnload.event_kind" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.ClassUnload.signature">
+<code class="descname">signature</code><em class="property"> = ''</em><a class="headerlink" href="#pyspresso.events.ClassUnload.signature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type signature.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyspresso.events.Event">
+<em class="property">class </em><code class="descclassname">pyspresso.events.</code><code class="descname">Event</code><a class="headerlink" href="#pyspresso.events.Event" title="Permalink to this definition">¶</a></dt>
+<dd><p>A JDWP event. For details, see
+<a class="reference external" href="http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html#JDWP_Event_Composite">http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html#JDWP_Event_Composite</a></p>
+<dl class="attribute">
+<dt id="pyspresso.events.Event.event_kind">
+<code class="descname">event_kind</code><em class="property"> = None</em><a class="headerlink" href="#pyspresso.events.Event.event_kind" title="Permalink to this definition">¶</a></dt>
+<dd><p>An <a class="reference internal" href="constants.html#pyspresso.constants.EventKind" title="pyspresso.constants.EventKind"><code class="xref any py py-class docutils literal"><span class="pre">EventKind</span></code></a> value.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.Event.request_id">
+<code class="descname">request_id</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.events.Event.request_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the request that generated this event.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyspresso.events.Exception">
+<em class="property">class </em><code class="descclassname">pyspresso.events.</code><code class="descname">Exception</code><a class="headerlink" href="#pyspresso.events.Exception" title="Permalink to this definition">¶</a></dt>
+<dd><p>Notification of an exception in the target VM. If the exception is
+thrown from a non-native method, the exception event is generated at the
+location where the exception is thrown. If the exception is thrown from a
+native method, the exception event is generated at the first non-native
+location reached after the exception is thrown.</p>
+<dl class="attribute">
+<dt id="pyspresso.events.Exception.catch_location">
+<code class="descname">catch_location</code><em class="property"> = None</em><a class="headerlink" href="#pyspresso.events.Exception.catch_location" title="Permalink to this definition">¶</a></dt>
+<dd><p>Location of catch, or 0 if not caught. An exception is considered to be
+caught if, at the point of the throw, the current location is dynamically
+enclosed in a try statement that handles the exception. (See the JVM
+specification for details). If there is such a try statement, the catch
+location is the first location in the appropriate catch clause.</p>
+<p>If there are native methods in the call stack at the time of the exception,
+there are important restrictions to note about the returned catch location.
+In such cases, it is not possible to predict whether an exception will be
+handled by some native method on the call stack. Thus, it is possible that
+exceptions considered uncaught here will, in fact, be handled by a native
+method and not cause termination of the target VM. Furthermore, it cannot
+be assumed that the catch location returned here will ever be reached by
+the throwing thread. If there is a native frame between the current
+location and the catch location, the exception might be handled and cleared
+in that native method instead.</p>
+<p>Note that compilers can generate try-catch blocks in some cases where they
+are not explicit in the source code; for example, the code generated for
+synchronized and finally blocks can contain implicit try-catch blocks. If
+such an implicitly generated try-catch is present on the call stack at the
+time of the throw, the exception will be considered caught even though it
+appears to be uncaught from examination of the source code.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.Exception.event_kind">
+<code class="descname">event_kind</code><em class="property"> = 4</em><a class="headerlink" href="#pyspresso.events.Exception.event_kind" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.Exception.exception">
+<code class="descname">exception</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.events.Exception.exception" title="Permalink to this definition">¶</a></dt>
+<dd><p>Thrown exception.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.Exception.location">
+<code class="descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pyspresso.events.Exception.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>Location of exception throw (or first non-native location after throw
+if thrown from a native method).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.Exception.thread">
+<code class="descname">thread</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.events.Exception.thread" title="Permalink to this definition">¶</a></dt>
+<dd><p>Thread with exception.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyspresso.events.FieldAccess">
+<em class="property">class </em><code class="descclassname">pyspresso.events.</code><code class="descname">FieldAccess</code><a class="headerlink" href="#pyspresso.events.FieldAccess" title="Permalink to this definition">¶</a></dt>
+<dd><p>Notification of a field access in the target VM. Field modifications
+are not considered field accesses. Requires canWatchFieldAccess capability
+- see
+<a class="reference external" href="http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html#JDWP_VirtualMachine_CapabilitiesNew">http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html#JDWP_VirtualMachine_CapabilitiesNew</a>.</p>
+<dl class="attribute">
+<dt id="pyspresso.events.FieldAccess.event_kind">
+<code class="descname">event_kind</code><em class="property"> = 20</em><a class="headerlink" href="#pyspresso.events.FieldAccess.event_kind" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.FieldAccess.field_id">
+<code class="descname">field_id</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.events.FieldAccess.field_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Field being accessed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.FieldAccess.location">
+<code class="descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pyspresso.events.FieldAccess.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>Location of access.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.FieldAccess.object">
+<code class="descname">object</code><em class="property"> = None</em><a class="headerlink" href="#pyspresso.events.FieldAccess.object" title="Permalink to this definition">¶</a></dt>
+<dd><p>Object being accessed (null for statics).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.FieldAccess.ref_type_tag">
+<code class="descname">ref_type_tag</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.events.FieldAccess.ref_type_tag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Kind of reference type. See JDWP.TypeTag
+(<a class="reference external" href="http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html#JDWP_TypeTag">http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html#JDWP_TypeTag</a>).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.FieldAccess.thread">
+<code class="descname">thread</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.events.FieldAccess.thread" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessing thread.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.FieldAccess.type_id">
+<code class="descname">type_id</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.events.FieldAccess.type_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type of field.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyspresso.events.FieldModification">
+<em class="property">class </em><code class="descclassname">pyspresso.events.</code><code class="descname">FieldModification</code><a class="headerlink" href="#pyspresso.events.FieldModification" title="Permalink to this definition">¶</a></dt>
+<dd><p>Notification of a field modification in the target VM. Requires
+canWatchFieldModification capability - see
+<a class="reference external" href="http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html#JDWP_VirtualMachine_CapabilitiesNew">http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html#JDWP_VirtualMachine_CapabilitiesNew</a>.</p>
+<dl class="attribute">
+<dt id="pyspresso.events.FieldModification.event_kind">
+<code class="descname">event_kind</code><em class="property"> = 21</em><a class="headerlink" href="#pyspresso.events.FieldModification.event_kind" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.FieldModification.field_id">
+<code class="descname">field_id</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.events.FieldModification.field_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Field being modified.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.FieldModification.location">
+<code class="descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pyspresso.events.FieldModification.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>Location of modify.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.FieldModification.object">
+<code class="descname">object</code><em class="property"> = None</em><a class="headerlink" href="#pyspresso.events.FieldModification.object" title="Permalink to this definition">¶</a></dt>
+<dd><p>Object being accessed (null for statics).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.FieldModification.ref_type_tag">
+<code class="descname">ref_type_tag</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.events.FieldModification.ref_type_tag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Kind of reference type. See JDWP.TypeTag
+(<a class="reference external" href="http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html#JDWP_TypeTag">http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html#JDWP_TypeTag</a>).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.FieldModification.thread">
+<code class="descname">thread</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.events.FieldModification.thread" title="Permalink to this definition">¶</a></dt>
+<dd><p>Modifying thread.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.FieldModification.type_id">
+<code class="descname">type_id</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.events.FieldModification.type_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type of field.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.FieldModification.value_to_be">
+<code class="descname">value_to_be</code><em class="property"> = None</em><a class="headerlink" href="#pyspresso.events.FieldModification.value_to_be" title="Permalink to this definition">¶</a></dt>
+<dd><p>Value to be assigned.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyspresso.events.MethodEntry">
+<em class="property">class </em><code class="descclassname">pyspresso.events.</code><code class="descname">MethodEntry</code><a class="headerlink" href="#pyspresso.events.MethodEntry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Notification of a method invocation in the target VM. This event is
+generated before any code in the invoked method has executed. Method entry
+events are generated for both native and non-native methods.</p>
+<p>In some VMs method entry events can occur for a particular thread before
+its thread start event occurs if methods are called as part of the thread&#8217;s
+initialization.</p>
+<dl class="attribute">
+<dt id="pyspresso.events.MethodEntry.event_kind">
+<code class="descname">event_kind</code><em class="property"> = 40</em><a class="headerlink" href="#pyspresso.events.MethodEntry.event_kind" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.MethodEntry.location">
+<code class="descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pyspresso.events.MethodEntry.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>The initial executable location in the method.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.MethodEntry.thread">
+<code class="descname">thread</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.events.MethodEntry.thread" title="Permalink to this definition">¶</a></dt>
+<dd><p>Thread which entered method.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyspresso.events.MethodExit">
+<em class="property">class </em><code class="descclassname">pyspresso.events.</code><code class="descname">MethodExit</code><a class="headerlink" href="#pyspresso.events.MethodExit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Notification of a method return in the target VM. This event is
+generated after all code in the method has executed, but the location of
+this event is the last executed location in the method. Method exit events
+are generated for both native and non-native methods. Method exit events
+are not generated if the method terminates with a thrown exception.</p>
+<dl class="attribute">
+<dt id="pyspresso.events.MethodExit.event_kind">
+<code class="descname">event_kind</code><em class="property"> = 41</em><a class="headerlink" href="#pyspresso.events.MethodExit.event_kind" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.MethodExit.location">
+<code class="descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pyspresso.events.MethodExit.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>Location of exit.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.MethodExit.thread">
+<code class="descname">thread</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.events.MethodExit.thread" title="Permalink to this definition">¶</a></dt>
+<dd><p>Thread which exited method .</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyspresso.events.MethodExitWithReturnValue">
+<em class="property">class </em><code class="descclassname">pyspresso.events.</code><code class="descname">MethodExitWithReturnValue</code><a class="headerlink" href="#pyspresso.events.MethodExitWithReturnValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Notification of a method return in the target VM. This event is
+generated after all code in the method has executed, but the location of
+this event is the last executed location in the method. Method exit events
+are generated for both native and non-native methods. Method exit events
+are not generated if the method terminates with a thrown exception.</p>
+<dl class="attribute">
+<dt id="pyspresso.events.MethodExitWithReturnValue.event_kind">
+<code class="descname">event_kind</code><em class="property"> = 42</em><a class="headerlink" href="#pyspresso.events.MethodExitWithReturnValue.event_kind" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.MethodExitWithReturnValue.location">
+<code class="descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pyspresso.events.MethodExitWithReturnValue.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>Location of exit.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.MethodExitWithReturnValue.thread">
+<code class="descname">thread</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.events.MethodExitWithReturnValue.thread" title="Permalink to this definition">¶</a></dt>
+<dd><p>Thread which exited method.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.MethodExitWithReturnValue.value">
+<code class="descname">value</code><em class="property"> = None</em><a class="headerlink" href="#pyspresso.events.MethodExitWithReturnValue.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Value that will be returned by the method.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyspresso.events.MonitorContendedEnter">
+<em class="property">class </em><code class="descclassname">pyspresso.events.</code><code class="descname">MonitorContendedEnter</code><a class="headerlink" href="#pyspresso.events.MonitorContendedEnter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Notification that a thread in the target VM is attempting to enter a
+monitor that is already acquired by another thread. Requires
+canRequestMonitorEvents capability - see
+<a class="reference external" href="http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html#JDWP_VirtualMachine_CapabilitiesNew">http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html#JDWP_VirtualMachine_CapabilitiesNew</a>.</p>
+<dl class="attribute">
+<dt id="pyspresso.events.MonitorContendedEnter.event_kind">
+<code class="descname">event_kind</code><em class="property"> = 43</em><a class="headerlink" href="#pyspresso.events.MonitorContendedEnter.event_kind" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.MonitorContendedEnter.location">
+<code class="descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pyspresso.events.MonitorContendedEnter.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>Location of contended monitor enter.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.MonitorContendedEnter.object">
+<code class="descname">object</code><em class="property"> = None</em><a class="headerlink" href="#pyspresso.events.MonitorContendedEnter.object" title="Permalink to this definition">¶</a></dt>
+<dd><p>Monitor object reference.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.MonitorContendedEnter.thread">
+<code class="descname">thread</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.events.MonitorContendedEnter.thread" title="Permalink to this definition">¶</a></dt>
+<dd><p>Thread which is trying to enter the monitor.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyspresso.events.MonitorContendedEntered">
+<em class="property">class </em><code class="descclassname">pyspresso.events.</code><code class="descname">MonitorContendedEntered</code><a class="headerlink" href="#pyspresso.events.MonitorContendedEntered" title="Permalink to this definition">¶</a></dt>
+<dd><p>Notification of a thread in the target VM is entering a monitor after
+waiting for it to be released by another thread. Requires
+canRequestMonitorEvents capability - see
+<a class="reference external" href="http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html#JDWP_VirtualMachine_CapabilitiesNew">http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html#JDWP_VirtualMachine_CapabilitiesNew</a>.</p>
+<dl class="attribute">
+<dt id="pyspresso.events.MonitorContendedEntered.event_kind">
+<code class="descname">event_kind</code><em class="property"> = 44</em><a class="headerlink" href="#pyspresso.events.MonitorContendedEntered.event_kind" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.MonitorContendedEntered.location">
+<code class="descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pyspresso.events.MonitorContendedEntered.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>Location of contended monitor enter.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.MonitorContendedEntered.object">
+<code class="descname">object</code><em class="property"> = None</em><a class="headerlink" href="#pyspresso.events.MonitorContendedEntered.object" title="Permalink to this definition">¶</a></dt>
+<dd><p>Monitor object reference.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.MonitorContendedEntered.thread">
+<code class="descname">thread</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.events.MonitorContendedEntered.thread" title="Permalink to this definition">¶</a></dt>
+<dd><p>Thread which entered monitor.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyspresso.events.MonitorWait">
+<em class="property">class </em><code class="descclassname">pyspresso.events.</code><code class="descname">MonitorWait</code><a class="headerlink" href="#pyspresso.events.MonitorWait" title="Permalink to this definition">¶</a></dt>
+<dd><p>Notification of a thread about to wait on a monitor object. Requires
+canRequestMonitorEvents capability - see
+<a class="reference external" href="http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html#JDWP_VirtualMachine_CapabilitiesNew">http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html#JDWP_VirtualMachine_CapabilitiesNew</a>.</p>
+<dl class="attribute">
+<dt id="pyspresso.events.MonitorWait.event_kind">
+<code class="descname">event_kind</code><em class="property"> = 45</em><a class="headerlink" href="#pyspresso.events.MonitorWait.event_kind" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.MonitorWait.location">
+<code class="descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pyspresso.events.MonitorWait.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>Location at which the wait will occur.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.MonitorWait.object">
+<code class="descname">object</code><em class="property"> = None</em><a class="headerlink" href="#pyspresso.events.MonitorWait.object" title="Permalink to this definition">¶</a></dt>
+<dd><p>Monitor object reference.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.MonitorWait.thread">
+<code class="descname">thread</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.events.MonitorWait.thread" title="Permalink to this definition">¶</a></dt>
+<dd><p>Thread which is about to wait.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.MonitorWait.timeout">
+<code class="descname">timeout</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.events.MonitorWait.timeout" title="Permalink to this definition">¶</a></dt>
+<dd><p>Thread wait time in milliseconds.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyspresso.events.MonitorWaited">
+<em class="property">class </em><code class="descclassname">pyspresso.events.</code><code class="descname">MonitorWaited</code><a class="headerlink" href="#pyspresso.events.MonitorWaited" title="Permalink to this definition">¶</a></dt>
+<dd><p>Notification that a thread in the target VM has finished waiting on
+Requires canRequestMonitorEvents capability - see
+<a class="reference external" href="http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html#JDWP_VirtualMachine_CapabilitiesNew">http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html#JDWP_VirtualMachine_CapabilitiesNew</a>.</p>
+<dl class="attribute">
+<dt id="pyspresso.events.MonitorWaited.event_kind">
+<code class="descname">event_kind</code><em class="property"> = 46</em><a class="headerlink" href="#pyspresso.events.MonitorWaited.event_kind" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.MonitorWaited.location">
+<code class="descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pyspresso.events.MonitorWaited.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>Location at which the wait occured.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.MonitorWaited.object">
+<code class="descname">object</code><em class="property"> = None</em><a class="headerlink" href="#pyspresso.events.MonitorWaited.object" title="Permalink to this definition">¶</a></dt>
+<dd><p>Monitor object reference.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.MonitorWaited.thread">
+<code class="descname">thread</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.events.MonitorWaited.thread" title="Permalink to this definition">¶</a></dt>
+<dd><p>Thread which waited.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.MonitorWaited.timed_out">
+<code class="descname">timed_out</code><em class="property"> = False</em><a class="headerlink" href="#pyspresso.events.MonitorWaited.timed_out" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if timed out.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyspresso.events.SingleStep">
+<em class="property">class </em><code class="descclassname">pyspresso.events.</code><code class="descname">SingleStep</code><a class="headerlink" href="#pyspresso.events.SingleStep" title="Permalink to this definition">¶</a></dt>
+<dd><p>Notification of step completion in the target VM. The step event is
+generated before the code at its location is executed.</p>
+<dl class="attribute">
+<dt id="pyspresso.events.SingleStep.event_kind">
+<code class="descname">event_kind</code><em class="property"> = 1</em><a class="headerlink" href="#pyspresso.events.SingleStep.event_kind" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.SingleStep.location">
+<code class="descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pyspresso.events.SingleStep.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>Location stepped to.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.SingleStep.thread">
+<code class="descname">thread</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.events.SingleStep.thread" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stepped thread.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyspresso.events.ThreadDeath">
+<em class="property">class </em><code class="descclassname">pyspresso.events.</code><code class="descname">ThreadDeath</code><a class="headerlink" href="#pyspresso.events.ThreadDeath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Notification of a completed thread in the target VM. The notification
+is generated by the dying thread before it terminates. Because of this
+timing, it is possible for <a class="reference external" href="mailto:{&#37;&#52;&#48;link">{<span>&#64;</span>link</a> VirtualMachine#allThreads} to return this
+thread after this event is received.</p>
+<p>Note that this event gives no information about the lifetime of the thread
+object. It may or may not be collected soon depending on what references
+exist in the target VM.</p>
+<dl class="attribute">
+<dt id="pyspresso.events.ThreadDeath.event_kind">
+<code class="descname">event_kind</code><em class="property"> = 7</em><a class="headerlink" href="#pyspresso.events.ThreadDeath.event_kind" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.ThreadDeath.thread">
+<code class="descname">thread</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.events.ThreadDeath.thread" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ending thread.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyspresso.events.ThreadStart">
+<em class="property">class </em><code class="descclassname">pyspresso.events.</code><code class="descname">ThreadStart</code><a class="headerlink" href="#pyspresso.events.ThreadStart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Notification of a new running thread in the target VM. The new thread
+can be the result of a call to java.lang.Thread.start or the result of
+attaching a new thread to the VM though JNI. The notification is generated
+by the new thread some time before its execution starts. Because of this
+timing, it is possible to receive other events for the thread before this
+event is received. (Notably, Method Entry Events and Method Exit Events
+might occur during thread initialization. It is also possible for the
+VirtualMachine AllThreads command
+(<a class="reference external" href="http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html#JDWP_VirtualMachine_AllThreads">http://docs.oracle.com/javase/8/docs/platform/jpda/jdwp/jdwp-protocol.html#JDWP_VirtualMachine_AllThreads</a>)
+to return a thread before its thread start event is received.</p>
+<p>Note that this event gives no information about the creation of the thread
+object which may have happened much earlier, depending on the VM being
+debugged.</p>
+<dl class="attribute">
+<dt id="pyspresso.events.ThreadStart.event_kind">
+<code class="descname">event_kind</code><em class="property"> = 6</em><a class="headerlink" href="#pyspresso.events.ThreadStart.event_kind" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.ThreadStart.thread">
+<code class="descname">thread</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.events.ThreadStart.thread" title="Permalink to this definition">¶</a></dt>
+<dd><p>Started thread.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyspresso.events.VMDeath">
+<em class="property">class </em><code class="descclassname">pyspresso.events.</code><code class="descname">VMDeath</code><a class="headerlink" href="#pyspresso.events.VMDeath" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="pyspresso.events.VMDeath.event_kind">
+<code class="descname">event_kind</code><em class="property"> = 99</em><a class="headerlink" href="#pyspresso.events.VMDeath.event_kind" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyspresso.events.VMStart">
+<em class="property">class </em><code class="descclassname">pyspresso.events.</code><code class="descname">VMStart</code><a class="headerlink" href="#pyspresso.events.VMStart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Notification of initialization of a target VM. This event is received
+before the main thread is started and before any application code has been
+executed. Before this event occurs a significant amount of system code has
+executed and a number of system classes have been loaded. This event is
+always generated by the target VM, even if not explicitly requested.</p>
+<dl class="attribute">
+<dt id="pyspresso.events.VMStart.event_kind">
+<code class="descname">event_kind</code><em class="property"> = 90</em><a class="headerlink" href="#pyspresso.events.VMStart.event_kind" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyspresso.events.VMStart.thread">
+<code class="descname">thread</code><em class="property"> = 0</em><a class="headerlink" href="#pyspresso.events.VMStart.thread" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initial thread.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="event_modifiers.html" class="btn btn-neutral float-right" title="pyspresso.event_modifiers" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="transport.html" class="btn btn-neutral" title="pyspresso.transport" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Jason Geffner.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
